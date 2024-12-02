@@ -23,7 +23,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   breakBeam = analogRead(A0);
   Serial.println(breakBeam);
-  duty = 200;
+  duty = 255;
 
   switch (state) {
     case 1:  // forward
@@ -71,17 +71,16 @@ void pwm_init(void) {
 }
 
 void rollForward(int duty) {
-  OCR5B = duty;
+  OCR5A = duty;
   PORTB = 0b10;
 }
 
 void rollBackward(int duty) {
   OCR5A = duty;
-  PORTB = 1;
+  PORTB = 0b1;
 }
 
 void stopRolling() {
   OCR5A = 0;
-  OCR5B = 0;
   PORTB = 0;
 }
