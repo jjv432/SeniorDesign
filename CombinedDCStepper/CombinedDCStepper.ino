@@ -1,5 +1,6 @@
 int dt = 60;
 float breakBeam = 0;
+float tallBreakBeam = 0;
 int state = 1;
 int t = 0;
 int debounceDT = 1000;
@@ -20,7 +21,9 @@ void loop() {
 
 
   breakBeam = analogRead(A0);
-  Serial.println(breakBeam);
+  tallBreakBeam = analogRead(A1);
+  Serial.println(tallBreakBeam);
+  
   duty = 255;
 
   switch (state) {
