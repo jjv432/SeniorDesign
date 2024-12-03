@@ -11,7 +11,5 @@ void loop() {
   delayMicroseconds(dt);
   PORTA |= 0b10;
   delayMicroseconds(dt);
-  
-
 
 }
