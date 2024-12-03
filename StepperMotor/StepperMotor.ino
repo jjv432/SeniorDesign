@@ -1,15 +1,17 @@
+int dt = 60;
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  digitalWrite(2, LOW);
 
+  DDRA = 255;
+  PORTA = 0b1;
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(3, LOW);
-  digitalWrite(3, HIGH);
-  delayMicroseconds(200);
+  PORTA &= 0b01;  
+  delayMicroseconds(dt);
+  PORTA |= 0b10;
+  delayMicroseconds(dt);
+  
+
 
 }
