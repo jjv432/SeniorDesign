@@ -30,7 +30,6 @@ void loop() {
       if (breakBeam >= beamTol) {
         state = 2;
         prevState = 1;
-        
       }
 
       break;
@@ -38,12 +37,12 @@ void loop() {
     case 2:  // stop
       stopRolling();
 
-      // PORTA &= 0b01;
-      // // delayMicroseconds(dt);
-      // PORTA |= 0b10;
-      // delayMicroseconds(dt);
+      PORTA &= 0b01;
+      delayMicroseconds(dt);
+      PORTA |= 0b10;
+      delayMicroseconds(dt);
 
-      if (breakBeam < .9*beamTol) {
+      if (breakBeam < .9 * beamTol) {
         if (prevState == 3) {
           state = 1;
 
