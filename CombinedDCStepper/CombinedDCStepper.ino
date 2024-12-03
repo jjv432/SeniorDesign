@@ -2,12 +2,13 @@ int dt = 60;
 float breakBeam = 0;
 int state = 1;
 int t = 0;
+int debounceDT = 1000;
 int duty, prevState;
-const int beamTol = 5;
+const int beamTol = 4;
 
 void setup() {
 
-pwm_init();
+  pwm_init();
   DDRB = 255;
   DDRA = 255;
   PORTA = 0b1;
@@ -16,34 +17,54 @@ pwm_init();
 
 void loop() {
   // put your main code here, to run repeatedly:
-  PORTA &= 0b01;  
-  delayMicroseconds(dt);
-  PORTA |= 0b10;
-  delayMicroseconds(dt);
+
 
   breakBeam = analogRead(A0);
   Serial.println(breakBeam);
   duty = 255;
 
   switch (state) {
-    case 1: // stepper idle
-    desPos = 0;
-    break;
-    
-    case 2: // CCW 90
-    desPos = 90;
-    direction = 1;
-    break;
+    case 1:  // forward
+      rollForward(duty);
 
-    case 3: 
-    desPos = 90;
-    direction = -1;
-    break;
+      if (breakBeam <= beamTol) {
+        state = 2;
+        prevState = 1;
+        
+      }
 
-    rollForward();
+      break;
 
+    case 2:  // stop
+      stopRolling();
+
+      // PORTA &= 0b01;
+      // // delayMicroseconds(dt);
+      // PORTA |= 0b10;
+      // delayMicroseconds(dt);
+
+      if (breakBeam > 2*beamTol) {
+        if (prevState == 3) {
+          state = 1;
+
+        }
+
+        else if (prevState == 1) {
+          state = 3;
+        }
+        delay(debounceDT);
+      }
+      break;
+
+    case 3:  // reverse
+      rollBackward(duty);
+
+      if (breakBeam <= beamTol) {
+        state = 2;
+        prevState = 3;
+      }
+      break;
   }
-
 }
 
 void pwm_init(void) {
