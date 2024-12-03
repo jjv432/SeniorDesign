@@ -1,9 +1,9 @@
 float breakBeam = 0;
 int state = 1;
 int t = 0;
-int dt = 0;
+int dt = 500;
 int duty, prevState;
-const int beamTol = 5;
+const int beamTol = 8;
 
 void setup() {
   // put your setup code here, to run once:
@@ -32,6 +32,7 @@ void loop() {
       if (breakBeam <= beamTol) {
         state = 2;
         prevState = 1;
+        // delay(dt);
       }
 
       break;
@@ -43,10 +44,12 @@ void loop() {
       if (breakBeam > beamTol) {
         if (prevState == 3) {
           state = 1;
+          delay(dt);
         }
 
         else if (prevState == 1) {
           state = 3;
+          delay(dt);
         }
       }
       break;
@@ -57,6 +60,7 @@ void loop() {
       if (breakBeam <= beamTol) {
         state = 2;
         prevState = 3;
+        // delay(dt);
       }
       break;
   }
