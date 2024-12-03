@@ -4,7 +4,7 @@ int state = 1;
 int t = 0;
 int debounceDT = 1000;
 int duty, prevState;
-const int beamTol = 4;
+const int beamTol = 500;
 
 void setup() {
 
@@ -27,7 +27,7 @@ void loop() {
     case 1:  // forward
       rollForward(duty);
 
-      if (breakBeam <= beamTol) {
+      if (breakBeam >= beamTol) {
         state = 2;
         prevState = 1;
         
@@ -43,7 +43,7 @@ void loop() {
       // PORTA |= 0b10;
       // delayMicroseconds(dt);
 
-      if (breakBeam > 2*beamTol) {
+      if (breakBeam < .9*beamTol) {
         if (prevState == 3) {
           state = 1;
 
@@ -59,7 +59,7 @@ void loop() {
     case 3:  // reverse
       rollBackward(duty);
 
-      if (breakBeam <= beamTol) {
+      if (breakBeam >= beamTol) {
         state = 2;
         prevState = 3;
       }
