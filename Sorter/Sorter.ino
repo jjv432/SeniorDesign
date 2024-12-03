@@ -1,19 +1,24 @@
+// Stepper variables
 int stepper_dt = 6;
-float breakBeamVal = 0;
-float tallBreakBeam = 0;
-int state = 1;
-int t = 0;
-int debounceDT = 0;
-int duty, prevState;
-const int beamTol = 500;
 int curPos = 0;
 int desPos = 0;
-int t_not;
-int button_delay = 100;
 
+// Breakbeam variables
+float breakBeamVal = 0;
+bool breakBeam = 0;
+const int beamTol = 500; // tolerance to switch between broken and not broken
+
+// Button variables
+int button_delay = 100;
 int switch1Value, switch1OldValue;
 bool button = 1;
-bool breakBeam = 0;
+
+// Logic variables
+int state = 1;
+int t = 0;
+int duty, prevState;
+int t_not;
+
 
 void setup() {
 
@@ -26,12 +31,13 @@ void setup() {
   DDRC = 0;
   PORTC = 0xFF;
   switch1OldValue = PINC & 0b1;
+
+  duty = 255; // motor speed
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  // Serial.println(state);
 
+  // Tracking Changing Button Values
   switch1Value = PINC & 0b1;
 
   if ((switch1OldValue == 1) && (switch1Value == 0)) {
@@ -43,9 +49,8 @@ void loop() {
 
   switch1OldValue = switch1Value;
 
+  // Reading value from the break beam
   breakBeamVal = analogRead(A0);
-
-  duty = 255;
 
   if (breakBeamVal >= beamTol) {
     breakBeam = 1;
@@ -53,6 +58,7 @@ void loop() {
     breakBeam = 0;
   }
 
+  // Main switch to determine system behavior
   switch (state) {
 
     case 1:  // Rolling forward, arm at 0
@@ -62,7 +68,7 @@ void loop() {
         state = 3;
       else if (breakBeam == 1) {
         state = 2;
-        t_not = millis();
+        t_not = millis(); // this is a guard for state 2
       }
 
       break;
@@ -84,6 +90,7 @@ void loop() {
       break;
   }
 
+  // Code to make the stepper motor move to the desired positions
   if (curPos < desPos) {
     PORTA &= 0b0;
     PORTA &= 0b01;
@@ -102,6 +109,7 @@ void loop() {
   }
 }
 
+// This function enables PWM
 void pwm_init(void) {
   DDRL = 255;
   TCCR5A = _BV(COM5A1) | _BV(COM5B1) | _BV(WGM52) | _BV(WGM50);
@@ -110,16 +118,19 @@ void pwm_init(void) {
   OCR5B = 0;
 }
 
+// This moves the conveyor belt forward
 void rollForward(int duty) {
   OCR5A = duty;
   PORTB = 0b10;
 }
 
+// This moves the conveyor belt backward
 void rollBackward(int duty) {
   OCR5A = duty;
   PORTB = 0b1;
 }
 
+// This stops the conveyor belt
 void stopRolling() {
   OCR5A = 0;
   PORTB = 0;
