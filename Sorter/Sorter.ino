@@ -7,7 +7,7 @@ int max_step = 800; // 90 degrees
 // Breakbeam variables
 float breakBeamVal = 0;
 bool breakBeam = 0;
-const int beamTol = 500; // tolerance to switch between broken and not broken
+const int beamTol = 700; // tolerance to switch between broken and not broken
 
 // Button variables
 int button_delay = 100;
@@ -18,7 +18,7 @@ bool button = 1;
 int state = 1;
 int t = 0;
 int duty, prevState;
-int t_not;
+int t_not = 0;
 
 
 void setup() {
@@ -52,6 +52,8 @@ void loop() {
 
   // Reading value from the break beam
   breakBeamVal = analogRead(A0);
+  // Serial.println(breakBeamVal);
+
 
   if (breakBeamVal >= beamTol) {
     breakBeam = 1;
