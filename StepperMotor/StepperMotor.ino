@@ -1,15 +1,54 @@
 int dt = 60;
+int state = 1;
+int desPos = 0;
+
+int stepper_dt = 30;
+int curPos = 0;
+int max_step = 1600; // 90 degrees
 void setup() {
 
-  DDRA = 255;
-  PORTA = 0b1;
+  DDRB = 255;
+  PORTB = 0b10;
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  PORTA &= 0b01;  
-  delayMicroseconds(dt);
-  PORTA |= 0b10;
-  delayMicroseconds(dt);
 
+  switch(state){
+    case 1: 
+    desPos = max_step;
+    if (curPos == max_step){
+      state = 2;
+      delay(1000);
+    }
+    break;
+    case 2: 
+    desPos = 0;
+    if (curPos == 0){
+      state = 1;
+      delay(1000);
+    }
+    break;
+
+  }
+
+
+  if (curPos < desPos) {
+    PORTB = 0b1;
+    driveStepper();
+    curPos++;
+
+  } else if (curPos > desPos) {
+    PORTB = 0b10;
+    driveStepper();
+    curPos--;
+  }
+
+}
+
+void driveStepper(void){
+  PORTB &= 0b01;
+    delayMicroseconds(stepper_dt);
+    PORTB |= 0b10;
+    delayMicroseconds(stepper_dt);
 }
