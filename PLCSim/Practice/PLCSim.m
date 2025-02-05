@@ -14,4 +14,10 @@ plcladderoption('Counters_Basic', 'Animation', 'on')
 % In order to do a counter, you need to go to the 'CTU_InitialValue' struct
 % in the workspace. Here, you can edit what PRE and ACC values are
 
+% For timers, do the same idea.  The PRE value is in ** milliseconds **.
 
+
+%% Automatically creating slx files
+% new_system("<file name>")
+% open_system("<file name>")
+% save_system("<file name>")
