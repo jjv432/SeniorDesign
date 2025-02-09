@@ -37,8 +37,8 @@ Allows for multiple boxes to be made and then deleted on the same axes
 %% Testing animation
 c = conveyor_assembly(5, 1, 0, 0);
 c.draw_conveyor;
-axis auto
 b = box();
 b.X_Position = 0;
 b.Y_Position = 1;
+% velocity, duration (seconds)
 b.move_box(1, 3);
