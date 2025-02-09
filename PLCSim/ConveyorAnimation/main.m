@@ -15,5 +15,5 @@ and tread?
 
 clc; clear; close all; format compact
 % Create an instance
-c = conveyor_base(5, 1, 0, 0);
+c = conveyor_assembly(5, 1, 0, 0);
 c.draw_conveyor;
