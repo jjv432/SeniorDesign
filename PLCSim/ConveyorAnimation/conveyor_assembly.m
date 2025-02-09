@@ -56,7 +56,7 @@ classdef conveyor_assembly < handle
         % Plots the conveyor belt in a figure.  Calls make_conveyor_coords
         % if there aren't any coords made yet.
         function draw_conveyor(obj)
-            if ~exist(obj.BaseXCoordinates, 'var') || ~exist(obj.BaseYCoordinates, 'var')
+            if isempty(obj.BaseXCoordinates) || isempty(obj.BaseYCoordinates)
                 obj.make_conveyor_coords;
             end
             figure()
