@@ -41,16 +41,6 @@ classdef conveyor_base < handle
 
             [obj.BaseXCoordinates, obj.BaseYCoordinates]  = poly2cw(x_vals_base, y_vals_base);
 
-            % Making the tread
-            x_vals_tread = x_vals_base(1):obj.TreadLength:x_vals_base(end);
-            obj.TreadXCoordinates = sort([x_vals_tread, x_vals_tread]); % Need to double up to make the patch easier
-
-            % % Not Working
-            % for i = 1:(numel(x_vals_tread) /2)
-            %     temp = [max(y_vals_base), max(y_vals_base), max(y_vals_base) + obj.TreadHeight, max(y_vals_base) + obj.TreadHeight];
-            %     obj.TreadYCoordinates = [obj.TreadYCoordinates, temp];
-            % end
-
         end
 
         % Plots the conveyor belt in a figure.  Calls make_conveyor_coords

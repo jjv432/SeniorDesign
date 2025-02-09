@@ -3,20 +3,29 @@ classdef tread
     %   Detailed explanation goes here
 
     properties
-        Property1
+        Height
+        Width
     end
 
     methods
-        function obj = tread(inputArg1,inputArg2)
-            %UNTITLED4 Construct an instance of this class
-            %   Detailed explanation goes here
-            obj.Property1 = inputArg1 + inputArg2;
+        function obj = tread(Height, Width)
+            if nargin == 2
+            obj.Height = Height;
+            obj.Width = Width;
+            end
+
         end
 
-        function outputArg = method1(obj,inputArg)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
-            outputArg = obj.Property1 + inputArg;
+        function make_tread_coords(obj)
+            % Making the base of the conveyor belt
+            y_vals_base = obj.Height * [0 1 1 0] + obj.Y_Position;
+            x_vals_base = obj.Length * [0 0 1 1]+ obj.X_Position;
+
+            [obj.BaseXCoordinates, obj.BaseYCoordinates]  = poly2cw(x_vals_base, y_vals_base);
+
+            % Making the tread
+            x_vals_tread = x_vals_base(1):obj.TreadLength:x_vals_base(end);
+            obj.TreadXCoordinates = sort([x_vals_tread, x_vals_tread]); % Need to double up to make the patch easier
         end
     end
 end
