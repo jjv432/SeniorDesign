@@ -21,3 +21,25 @@ plcladderoption('Counters_Basic', 'Animation', 'on')
 % new_system("<file name>")
 % open_system("<file name>")
 % save_system("<file name>")
+
+
+%% Animations
+% out = sim("SISO_To_Workspace_Animation")
+% data = out.simout
+
+%{
+If getting the error: "Unrecognized variable BOOL", need to run PLC load
+types.  
+
+If there's still errors, clear the variable that the simulation is plotting
+to.  
+
+Example block: 
+
+out = sim("SISO_To_Workspace_Animation")
+data = out.s2
+time = out.tout
+figure();
+plot(time, data)
+
+%}
