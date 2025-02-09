@@ -63,7 +63,8 @@ classdef conveyor_assembly < handle
             hold on
             patch(obj.BaseXCoordinates, obj.BaseYCoordinates, 'b')
             % patch(obj.TreadXCoordinates, obj.TreadYCoordinates, 'r');
-            axis( 2*[-obj.Length, obj.Length, -obj.Height, obj.Height]);
+            axis( 2*[mean(obj.BaseXCoordinates)-obj.Length, mean(obj.BaseXCoordinates) + obj.Length/2, -obj.Height, obj.Height]);
+            axis equal
         end
     end
 end

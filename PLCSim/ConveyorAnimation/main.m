@@ -16,6 +16,7 @@ Might make more sense to just move the box, and keep the conveyor static
 %}
 
 clc; clear; close all; format compact
+addpath("src")
 % Create an instance
 c = conveyor_assembly(5, 1, 0, 0);
 c.draw_conveyor;
@@ -35,6 +36,7 @@ Allows for multiple boxes to be made and then deleted on the same axes
 %}
 
 %% Testing animation
+close all
 c = conveyor_assembly(5, 1, 0, 0);
 c.draw_conveyor;
 b = box();

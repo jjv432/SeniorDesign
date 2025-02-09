@@ -34,7 +34,6 @@ classdef box < handle
 
             ax = gca;
             obj.figure = patch(obj.X_Coordinates, obj.Y_Coordinates, 'k', 'Parent', ax);
-            axis( 2*[-obj.Width, obj.Width, -obj.Height, obj.Height]);
 
         end
 
