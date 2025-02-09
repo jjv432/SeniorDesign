@@ -6,8 +6,14 @@ or
 c = converyor_belt to get default values of height and width
 %}
 
+%{
+To do:
+
+make tread it's own class, then make conveyor belt a super class of base
+and tread?
+%}
+
 clc; clear; close all; format compact
 % Create an instance
-c = conveyor_belt(5, 1, 0, 0);
+c = conveyor_base(5, 1, 0, 0);
 c.draw_conveyor;
-

@@ -1,4 +1,4 @@
-classdef conveyor_belt < handle
+classdef conveyor_base < handle
     % Making this a handle class so that values can be more readily changed
 
     properties
@@ -17,7 +17,7 @@ classdef conveyor_belt < handle
     methods
 
         % Constructor
-        function obj = conveyor_belt(Length, Height, X_Position, Y_Position)
+        function obj = conveyor_base(Length, Height, X_Position, Y_Position)
             % Setting default values
             if nargin < 2
                 Height = 3;
@@ -45,11 +45,11 @@ classdef conveyor_belt < handle
             x_vals_tread = x_vals_base(1):obj.TreadLength:x_vals_base(end);
             obj.TreadXCoordinates = sort([x_vals_tread, x_vals_tread]); % Need to double up to make the patch easier
 
-            % Not Working
-            for i = 1:(numel(x_vals_tread) /2)
-                temp = [max(y_vals_base), max(y_vals_base), max(y_vals_base) + obj.TreadHeight, max(y_vals_base) + obj.TreadHeight];
-                obj.TreadYCoordinates = [obj.TreadYCoordinates, temp];
-            end
+            % % Not Working
+            % for i = 1:(numel(x_vals_tread) /2)
+            %     temp = [max(y_vals_base), max(y_vals_base), max(y_vals_base) + obj.TreadHeight, max(y_vals_base) + obj.TreadHeight];
+            %     obj.TreadYCoordinates = [obj.TreadYCoordinates, temp];
+            % end
 
         end
 
@@ -62,7 +62,7 @@ classdef conveyor_belt < handle
             figure()
             hold on
             patch(obj.BaseXCoordinates, obj.BaseYCoordinates, 'b')
-            patch(obj.TreadXCoordinates, obj.TreadYCoordinates, 'r');
+            
             axis( 2*[-obj.Length, obj.Length, -obj.Height, obj.Height]);
         end
     end
