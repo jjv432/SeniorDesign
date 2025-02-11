@@ -13,6 +13,9 @@ make tread it's own class, then make conveyor belt a super class of base
 and tread?
 
 Might make more sense to just move the box, and keep the conveyor static
+
+Make the animate box parameter take in the dt from the simout value, that
+way it can act appropriately
 %}
 
 clc; clear; close all; format compact
@@ -36,11 +39,16 @@ Allows for multiple boxes to be made and then deleted on the same axes
 %}
 
 %% Testing animation
-close all
+clc; clear; close all
 c = conveyor_assembly(5, 1, 0, 0);
 c.draw_conveyor;
 b = box();
 b.X_Position = 0;
 b.Y_Position = 1;
 % velocity, duration (seconds)
-b.move_box(1, 3);
+b.move_box([1, 0], 1);
+b.push_box(1);
+
+
+% If value from simulink is 1, move box at 1 velo. Otherwise, move at 0
+% velo.
