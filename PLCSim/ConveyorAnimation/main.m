@@ -10,6 +10,10 @@ b.move_box(4, [1 0]);
 b.push_box(1);
 
 %%
+clc; clear; close all; format compact
 addpath("src")
 clc; clear; close all
-o = run_simulink_plc("SISO");
+edit_simulink_plc("MIMO");
+% edit_simulink_plc is a good function to mess with the .slx
+
+
