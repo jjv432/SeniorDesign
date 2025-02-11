@@ -10,10 +10,14 @@ b.move_box(4, [1 0]);
 b.push_box(1);
 
 %%
+% Need to make sure sim time is appropriate in the .slx
+
 clc; clear; close all; format compact
 addpath("src")
 clc; clear; close all
-edit_simulink_plc("MIMO");
+simin = [boolean(ones(10, 1)); boolean(zeros(10, 1)); boolean(ones(10, 1))];
+simin = timeseries(simin);
+out = run_simulink_plc("MIMO", '0', '30');
 % edit_simulink_plc is a good function to mess with the .slx
-
+figure(); plot(out.simout); ylim([-.1 1.1])
 
