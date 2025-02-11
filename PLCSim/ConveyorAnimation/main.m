@@ -17,9 +17,10 @@ start_time = 0;
 end_time = 30;
 time_step = 0.2;
 
+times = start_time:time_step:end_time;
+simin = [boolean(ones(floor(numel(times)/2), 1)); boolean(zeros(ceil(numel(times)/2), 1))];
 
-simin = [boolean(ones(10, 1)); boolean(zeros(10, 1)); boolean(ones(10, 1))];
-simin = timeseries(simin, linspace(start_time, end_time, numel(simin)));
+simin = timeseries(simin, times);
 
 %% Running simulation
 out = run_simulink_plc("MIMO", string(start_time), string(end_time), string(time_step));

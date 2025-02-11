@@ -17,6 +17,9 @@ start_time = 0;
 end_time = 30;
 time_step = 0.2;
 
+times = start_time:end_time:time_step;
+simin = [boolean(ones(numel(times), 1)); boolean(ones(numel(times), 1));]
+
 
 simin = [boolean(ones(10, 1)); boolean(zeros(10, 1)); boolean(ones(10, 1))];
 simin = timeseries(simin, linspace(start_time, end_time, numel(simin)));
@@ -31,14 +34,13 @@ out = run_simulink_plc("MIMO", string(start_time), string(end_time), string(time
 c = conveyor_assembly(10, 1, 0, 0);
 b = box();
 c.draw_conveyor;
-b.draw_box;
 
 b.X_Position = 0;
 b.Y_Position = 1;
 
 % Running loop
-for i = 1:numel(out.simout)
-    b.move_box(dt, 0, out.simout.Data(i))
+for i = 1:numel(out.simout.Data)
+    b.move_box(time_step, out.simout.Data(i), 0)
 end
 
 figure(); plot(out.simout); ylim([-.1 1.1])
