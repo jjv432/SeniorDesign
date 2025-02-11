@@ -58,34 +58,29 @@ classdef box < handle
 
         end
 
-        function push_box(obj, direction)
+        function push_box(obj, direction, dt)
             arguments
                 obj
                 direction (1, 1) {mustBeMember(direction, [1, -1])}
+                dt
             end
 
             scale_factor = 1.1;
-            dt = .1;
 
             if direction == -1
                 scale_factor = 1/scale_factor;
             end
 
             for i = 1:3
+                delete(obj.figure)
                 obj.Height = obj.Height*scale_factor;
                 obj.Width = obj.Width*scale_factor;
                 draw_box(obj)
-                pause(dt);
-                delete(obj.figure)
+                pause(dt);                
             end
 
-            move_box(obj, 2, [0, -2])
-
-
+            move_box(obj, 2, 0, -1)
 
         end
-
-
-
     end
 end
