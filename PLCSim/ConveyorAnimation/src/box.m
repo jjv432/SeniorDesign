@@ -37,12 +37,12 @@ classdef box < handle
 
         end
 
-        function move_box(obj, velocity, duration)
+        function move_box(obj, duration, velocity)
             arguments
                 obj
-                velocity (1, 2)
                 duration (1, 1) {mustBeNonnegative}
-
+                velocity (1,2)
+                
             end
             dt = .1;
             dx = velocity(1)*dt;
@@ -63,7 +63,7 @@ classdef box < handle
         function push_box(obj, direction)
             arguments
                 obj
-                direction (1, 1)
+                direction (1, 1) {mustBeMember(direction, [1, -1])}
             end
 
             scale_factor = 1.1;
@@ -81,7 +81,7 @@ classdef box < handle
                 delete(obj.figure)
             end
 
-            move_box(obj, [0, -2], 2)
+            move_box(obj, 2, [0, -2])
 
 
 

@@ -40,13 +40,14 @@ Allows for multiple boxes to be made and then deleted on the same axes
 
 %% Testing animation
 clc; clear; close all
-c = conveyor_assembly(5, 1, 0, 0);
+addpath("src");
+c = conveyor_assembly(10, 1, 0, 0);
 c.draw_conveyor;
 b = box();
 b.X_Position = 0;
 b.Y_Position = 1;
-% velocity, duration (seconds)
-b.move_box([1, 0], 1);
+%duration, velocity
+b.move_box(4, [1 0]);
 b.push_box(1);
 
 
