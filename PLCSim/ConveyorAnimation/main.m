@@ -11,17 +11,35 @@
 clc; clear; close all; format compact
 addpath("src")
 
-c = conveyor_assembly(10, 1, 0, 0);
-c.draw_conveyor;
-b = box();
-b.X_Position = 0;
-b.Y_Position = 1;
+
+%% Simulation parameters
+start_time = 0;
+end_time = 30;
+time_step = 0.2;
 
 
 simin = [boolean(ones(10, 1)); boolean(zeros(10, 1)); boolean(ones(10, 1))];
-simin = timeseries(simin);
-out = run_simulink_plc("MIMO", '0', '30');
+simin = timeseries(simin, linspace(start_time, end_time, numel(simin)));
+
+%% Running simulation
+out = run_simulink_plc("MIMO", string(start_time), string(end_time), string(time_step));
 % edit_simulink_plc is a good function to mess with the .slx
+
+%% Simulation results
+
+% Creating objects
+c = conveyor_assembly(10, 1, 0, 0);
+b = box();
+c.draw_conveyor;
+
+b.X_Position = 0;
+b.Y_Position = 1;
+
+% Running loop
+for i = 1:numel(out.simout.Data)
+    b.move_box(time_step, out.simout.Data(i), 0)
+end
+
 figure(); plot(out.simout); ylim([-.1 1.1])
 
 %{

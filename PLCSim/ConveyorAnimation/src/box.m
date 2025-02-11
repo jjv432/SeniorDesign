@@ -37,26 +37,24 @@ classdef box < handle
 
         end
 
-        function move_box(obj, duration, velocity)
+        function move_box(obj, dt, velocity_x, velocity_y)
             arguments
                 obj
-                duration (1, 1) {mustBeNonnegative}
-                velocity (1,2)
-                
-            end
-            dt = .1;
-            dx = velocity(1)*dt;
-            dy = velocity(2)*dt;
+                dt (1,1) {mustBeNonnegative}
+                velocity_x (1,1) = 0
+                velocity_y(1,1) = 0;
 
-            time = 0;
-            while time < duration
-                obj.X_Position = obj.X_Position + dx;
-                obj.Y_Position = obj.Y_Position + dy;
-                draw_box(obj)
-                pause(dt);
-                time = time + dt;
-                delete(obj.figure)
             end
+            delete(obj.figure)
+            dx = velocity_x*dt;
+            dy = velocity_y*dt;
+
+            obj.X_Position = obj.X_Position + dx;
+            obj.Y_Position = obj.Y_Position + dy;
+            draw_box(obj)
+            pause(dt);
+            
+
 
         end
 
