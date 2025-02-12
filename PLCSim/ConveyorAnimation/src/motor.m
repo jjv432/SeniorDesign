@@ -92,9 +92,9 @@ classdef motor < handle
 
             rot_matrix = [cos(obj.theta), -sin(obj.theta); sin(obj.theta), cos(obj.theta)];
 
-            temp = rot_matrix * [obj.X_Coordinates_Line; obj.Y_Coordinates_Line];
-            obj.X_Coordinates_Line = temp(1, :);
-            obj.Y_Coordinates_Line = temp(2, :);
+            temp = rot_matrix * [obj.X_Coordinates_Line - obj.X_Position; obj.Y_Coordinates_Line - obj.Y_Position];
+            obj.X_Coordinates_Line = temp(1, :) + obj.X_Position;
+            obj.Y_Coordinates_Line = temp(2, :) + obj.Y_Position;
 
             obj.theta = obj.theta + direction *(omega * dt);
             
