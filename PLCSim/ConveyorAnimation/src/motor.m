@@ -86,22 +86,24 @@ classdef motor < handle
                 obj.draw_motor;
             end
 
-            delete(obj.figureLine);
+            
 
             dt = .1;
 
-            rot_matrix = [cos(obj.theta), -sin(obj.theta); sin(obj.theta), cos(obj.theta)];
+            if omega ~= 0
+                delete(obj.figureLine);
+                rot_matrix = [cos(obj.theta), -sin(obj.theta); sin(obj.theta), cos(obj.theta)];
 
-            temp = rot_matrix * [obj.X_Coordinates_Line - obj.X_Position; obj.Y_Coordinates_Line - obj.Y_Position];
-            obj.X_Coordinates_Line = temp(1, :) + obj.X_Position;
-            obj.Y_Coordinates_Line = temp(2, :) + obj.Y_Position;
+                temp = rot_matrix * [obj.X_Coordinates_Line - obj.X_Position; obj.Y_Coordinates_Line - obj.Y_Position];
+                obj.X_Coordinates_Line = temp(1, :) + obj.X_Position;
+                obj.Y_Coordinates_Line = temp(2, :) + obj.Y_Position;
 
-            obj.theta = obj.theta + direction *(omega * dt);
-            
-            ax = gca;
-            obj.figureLine = patch(obj.X_Coordinates_Line, obj.Y_Coordinates_Line, 'k', 'Parent', ax);
-            pause(dt);
+                obj.theta = obj.theta + direction *(omega * dt);
 
+                ax = gca;
+                obj.figureLine = patch(obj.X_Coordinates_Line, obj.Y_Coordinates_Line, 'k', 'Parent', ax);
+                pause(dt);
+            end
 
         end
     end

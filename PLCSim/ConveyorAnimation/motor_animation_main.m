@@ -1,4 +1,4 @@
-clc; clear; close all; format compact
+clc; clearvars -except out; close all; format compact
 
 addpath("src")
 m1 = motor();
@@ -18,10 +18,22 @@ direction = -1;
 button1 = timeseries([boolean(zeros(10, 1)); boolean(ones(20, 1))]); 
 button2 = timeseries([boolean(zeros(20, 1)); boolean(ones(10, 1))]);
 
-out = run_simulink_plc("MIMO_ManualSwitch", '0', '30', '.1');
-for i = 1:50
+% out = run_simulink_plc("MIMO_FixedIO", '0', '30', '.1');
+
+%% Running the simulation 
+
+
+for i = 1:numel(out.motor1.Data)
     omega1 = out.motor1.Data(i) * omega;
     omega2 = out.motor2.Data(i) * omega;
     m1.rotate_motor(omega1, direction);
     m2.rotate_motor(omega2, -direction);
 end
+
+figure(); 
+hold on; 
+plot(out.motor1.Data); 
+plot(out.motor2.Data);  
+hold off;
+title("Expected Results");
+legend("Motor 1", "Motor 2");
