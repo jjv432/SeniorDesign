@@ -15,7 +15,10 @@ axis([-5 5 -5 5]);
 omega = .1;
 direction = -1;
 
+out = run_simulink_plc("MIMO_ManualSwitch", '0', '10', '.1');
 for i = 1:50
-    m1.rotate_motor(omega, direction);
-    m2.rotate_motor(omega, -direction);
+    omega1 = out.motor1.Data(i);
+    omega2 = out.motor2.Data(i);
+    m1.rotate_motor(omega1, direction);
+    m2.rotate_motor(omega2, -direction);
 end
