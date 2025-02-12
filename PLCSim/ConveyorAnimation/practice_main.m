@@ -1,0 +1,55 @@
+%{
+
+Create a conveyor belt object:
+c2 = conveyor_belt(2, 4)
+or
+c = converyor_belt to get default values of height and width
+%}
+
+%{
+To do:
+
+make tread it's own class, then make conveyor belt a super class of base
+and tread?
+
+Might make more sense to just move the box, and keep the conveyor static
+
+Make the animate box parameter take in the dt from the simout value, that
+way it can act appropriately
+%}
+
+clc; clear; close all; format compact
+addpath("src")
+% Create an instance
+c = conveyor_assembly(5, 1, 0, 0);
+c.draw_conveyor;
+
+%%
+b = box();
+% b.make_box_coordinates;
+b.draw_box;
+b.X_Position = 3;
+b.Y_Position = 3;
+b.draw_box;
+pause(1)
+delete(b.figures(1))
+
+%{
+Allows for multiple boxes to be made and then deleted on the same axes
+%}
+
+%% Testing animation
+clc; clear; close all
+addpath("src");
+c = conveyor_assembly(10, 1, 0, 0);
+c.draw_conveyor;
+b = box();
+b.X_Position = 0;
+b.Y_Position = 1;
+%duration, velocity
+b.move_box(4, [1 0]);
+b.push_box(1);
+
+
+% If value from simulink is 1, move box at 1 velo. Otherwise, move at 0
+% velo.
