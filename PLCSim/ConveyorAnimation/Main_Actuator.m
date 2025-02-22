@@ -12,16 +12,18 @@ c.draw_conveyor;
 b = box(1, 1, 0, c.Height);
 b.draw_box;
 
-for i = 1:30
-    b.move_box(.1, .5, 0);
-end
 %% Draw actuator
 LA = LinearActuator();
 LA.MakePatches
-LA.PlaceActuator(-5, 5);
+LA.PlaceActuator(3, c.Height);
 
+%% Move Box
 
-%% 
+while mean(b.X_Coordinates) < (LA.X_Position + LA.BaseHeight/2)
+    b.move_box(.1, .5, 0);
+end
+
+%%
 LA.Energize
 pause(1)
 LA.Deenergize
