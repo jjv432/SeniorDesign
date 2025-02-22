@@ -7,7 +7,7 @@ function out = run_simulink_plc(FileName, StartTime, EndTime)
     plcloadtypes
 
     if exist(FileName, 'file') == 4
-        out = sim(FileName, 'StartTime',StartTime,'StopTime',EndTime);
+        out = sim(FileName, 'StartTime',string(StartTime),'StopTime',string(EndTime), 'FixedStep', '.001');
     else
         disp("You will need to create the ladder logic first... please wait while file is generated")
         new_system(FileName)

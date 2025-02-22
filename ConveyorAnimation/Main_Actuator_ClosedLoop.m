@@ -24,23 +24,24 @@ s.PlaceSensor(2, c.Height);
 
 %% Run sim
 
-time_steps = 0:.1:1;
+time_steps = [0, .001];
 start_button = timeseries(boolean(ones(numel(time_steps), 1)));
 sensor = timeseries(boolean(ones(numel(time_steps), 1)));
 
 
 while mean(b.X_Coordinates) < (LA.X_Position + LA.BaseHeight/2)
-    out = run_simulink_plc("SensorActuator", '0', '.1');
+    out = run_simulink_plc("SensorActuator", '0', '.001');
     if out.motor.Data(end)
         b.move_box(.1, .5, 0);
     end
 
     if (mean(b.X_Coordinates) >= (s.X_Position))
         sensor = timeseries(boolean(1));
+        s.Energize;
     end
 
     if (out.actuator.Data(end))
-        s.Energize;
+        b.push_box(1, .1)
     end
 end
 
