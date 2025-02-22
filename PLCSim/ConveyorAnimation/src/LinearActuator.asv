@@ -1,0 +1,44 @@
+classdef LinearActuator < handle
+    %LINEARACTUATOR Summary of this class goes here
+    %   Detailed explanation goes here
+    
+    properties
+        X_Position
+        Y_Position
+        InnerDiameter
+        BaseHeight
+        LightDiameter
+    end
+    
+    methods
+        function obj = LinearActuator(X_Position, Y_Position)
+            %LINEARACTUATOR Construct an instance of this class
+            %   Detailed explanation goes here
+            obj.X_Position = X_Position;
+            obj.Y_Position = Y_Position;
+        end
+        
+        function MakeDrawings(obj)
+            %METHOD1 Summary of this method goes here
+            %   Detailed explanation goes here
+
+            % Piston
+            thetas = linspace(0, 2*pi, 100);
+            piston_x_coords = obj.InnerDiameter*cos(thetas) + obj.X_Position;
+            piston_y_coords = obj.InnerDiameter*sin(thetas) + obj.Y_Position;
+
+            % Base
+            base_x_coords = obj.BaseHeight * [.5 .5 -.5 -.5] + obj.X_Position;            
+            base_y_coords = obj.BaseHeight * [-.5 .5 .5 -.5] + obj.Y_Position;     
+
+            % Indicating Light
+            light_x_coords = obj.LightDiameter*cos(thetas) + obj.X_Position;
+            light_y_coords = obj.LightDiameter*sin(thetas) + obj.Y_Position - obj.BaseHeight;
+
+            ax = gca;
+            obj.figures = [patch(piston_x_coords, piston_y_coords, 'Parent', ax); patch(base_x_coords, base_y_coords, 'Parent', ax); patch(piston_x_coords, piston_y_coords, 'Parent', ax);
+
+        end
+    end
+end
+
