@@ -17,10 +17,18 @@ LA = LinearActuator();
 LA.MakePatches
 LA.PlaceActuator(3, c.Height);
 
+%% Draw sensor
+s = Sensor();
+s.MakePatches
+s.PlaceSensor(2, c.Height);
+
 %% Move Box
 
 while mean(b.X_Coordinates) < (LA.X_Position + LA.BaseHeight/2)
     b.move_box(.1, .5, 0);
+    if (mean(b.X_Coordinates) >= (s.X_Position))
+        s.Energize;
+    end
 end
 
 %%
