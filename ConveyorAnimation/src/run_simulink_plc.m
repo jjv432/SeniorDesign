@@ -1,4 +1,4 @@
-function out = run_simulink_plc(FileName, StartTime, EndTime, FixedStep)
+function out = run_simulink_plc(FileName, StartTime, EndTime)
 
     % Function will create a slx model in src if there isn't one already.
     % Else, it will open the existing model
@@ -7,7 +7,7 @@ function out = run_simulink_plc(FileName, StartTime, EndTime, FixedStep)
     plcloadtypes
 
     if exist(FileName, 'file') == 4
-        out = sim(FileName, 'StartTime',StartTime,'StopTime',EndTime, 'FixedStep', FixedStep);
+        out = sim(FileName, 'StartTime',StartTime,'StopTime',EndTime);
     else
         disp("You will need to create the ladder logic first... please wait while file is generated")
         new_system(FileName)
