@@ -73,8 +73,10 @@ classdef box < handle
 
             for i = 1:3
                 delete(obj.figure)
+                obj.X_Position = obj.X_Position - (.1/2)*obj.Width;
                 obj.Height = obj.Height*scale_factor;
                 obj.Width = obj.Width*scale_factor;
+                
                 draw_box(obj)
                 pause(dt);                
             end

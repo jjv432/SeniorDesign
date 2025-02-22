@@ -25,7 +25,9 @@ end
 
 %%
 LA.Energize
-pause(1)
+
+b.push_box(1, .1)
+
 LA.Deenergize
 
 
