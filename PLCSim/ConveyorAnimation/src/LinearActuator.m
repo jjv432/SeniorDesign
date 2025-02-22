@@ -44,7 +44,7 @@ classdef LinearActuator < handle
 
         end
 
-        function PlaceMotor(obj, new_x, new_y)
+        function PlaceActuator(obj, new_x, new_y)
             if nargin == 3
                 close % Bad?
                 obj.X_Position = new_x;

@@ -14,10 +14,12 @@ classdef box < handle
     end
 
     methods
-        function obj = box(Height, Width)
-            if nargin == 2
+        function obj = box(Height, Width, X_Position, Y_Position)
+            if nargin == 4
                 obj.Height = Height;
                 obj.Width = Width;
+                obj.X_Position = X_Position;
+                obj.Y_Position = Y_Position;
             end
         end
 
@@ -54,8 +56,6 @@ classdef box < handle
             draw_box(obj)
             pause(dt);
             
-
-
         end
 
         function push_box(obj, direction, dt)
