@@ -31,7 +31,7 @@ See [MATLAB Download Page](https://www.mathworks.com/help/install/ug/install-pro
 
 You will need to download the [Simulink PLC Coder](https://www.mathworks.com/help//releases/R2021a/plccoder/index.html?s_tid=CRUX_lftnav) package to run the MATLAB simulations of Ladder Diagrams.
 
-### Usage
+## Usage
 
-### License
+## License
 [MIT](LICENSE) © Richard Littauer
