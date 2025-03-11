@@ -9,7 +9,11 @@ PROGRAM main
   END_VAR
   VAR
     BoxBut : BOOL := 0;
-    StartBut : BOOL := 0;
+  END_VAR
+  VAR
+    StartBut AT %IX0.0 : BOOL := 0;
+  END_VAR
+  VAR
     My_Time : BOOL := 0;
     BB : BOOL := 0;
     BB2 : BOOL := 0;
