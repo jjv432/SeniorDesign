@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-11T14:10:47"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-11T14:53:34">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-11T15:53:30">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -19,55 +19,39 @@
     <pous>
       <pou name="main" pouType="program">
         <interface>
-          <localVars>
+          <externalVars>
             <variable name="St0">
               <type>
                 <BOOL/>
               </type>
-              <initialValue>
-                <simpleValue value="1"/>
-              </initialValue>
             </variable>
             <variable name="St1">
               <type>
                 <BOOL/>
               </type>
-              <initialValue>
-                <simpleValue value="0"/>
-              </initialValue>
             </variable>
             <variable name="St2">
               <type>
                 <BOOL/>
               </type>
-              <initialValue>
-                <simpleValue value="0"/>
-              </initialValue>
             </variable>
             <variable name="St3">
               <type>
                 <BOOL/>
               </type>
-              <initialValue>
-                <simpleValue value="0"/>
-              </initialValue>
             </variable>
             <variable name="St4">
               <type>
                 <BOOL/>
               </type>
-              <initialValue>
-                <simpleValue value="0"/>
-              </initialValue>
             </variable>
             <variable name="St5">
               <type>
                 <BOOL/>
               </type>
-              <initialValue>
-                <simpleValue value="0"/>
-              </initialValue>
             </variable>
+          </externalVars>
+          <localVars>
             <variable name="BoxBut">
               <type>
                 <BOOL/>
@@ -312,7 +296,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>St0</variable>
+              <variable>St1</variable>
             </contact>
             <contact localId="6" negated="true" width="21" height="20">
               <position x="420" y="110"/>
@@ -346,13 +330,13 @@
                   <position x="530" y="120"/>
                   <position x="485" y="120"/>
                   <position x="485" y="200"/>
-                  <position x="440" y="200"/>
+                  <position x="441" y="200"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>St0</variable>
+              <variable>St1</variable>
             </coil>
             <contact localId="33" negated="true" width="21" height="20">
               <position x="260" y="60"/>
@@ -368,7 +352,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>St0</variable>
+              <variable>St1</variable>
             </contact>
             <contact localId="28" negated="true" width="21" height="20" executionOrderId="0">
               <position x="380" y="60"/>
@@ -1018,7 +1002,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>St0</variable>
+              <variable>St1</variable>
             </contact>
             <contact localId="45" negated="false" width="21" height="20" executionOrderId="0">
               <position x="720" y="230"/>

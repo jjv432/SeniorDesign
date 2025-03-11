@@ -43,11 +43,11 @@ __end:
 
 void MAIN_init__(MAIN *data__, BOOL retain) {
   __INIT_EXTERNAL(BOOL,ST0,data__->ST0,retain)
-  __INIT_VAR(data__->ST1,0,retain)
-  __INIT_VAR(data__->ST2,0,retain)
-  __INIT_VAR(data__->ST3,0,retain)
-  __INIT_VAR(data__->ST4,0,retain)
-  __INIT_VAR(data__->ST5,0,retain)
+  __INIT_EXTERNAL(BOOL,ST1,data__->ST1,retain)
+  __INIT_EXTERNAL(BOOL,ST2,data__->ST2,retain)
+  __INIT_EXTERNAL(BOOL,ST3,data__->ST3,retain)
+  __INIT_EXTERNAL(BOOL,ST4,data__->ST4,retain)
+  __INIT_EXTERNAL(BOOL,ST5,data__->ST5,retain)
   __INIT_VAR(data__->BOXBUT,0,retain)
   __INIT_VAR(data__->STARTBUT,0,retain)
   __INIT_VAR(data__->MY_TIME,0,retain)
@@ -60,14 +60,14 @@ void MAIN_init__(MAIN *data__, BOOL retain) {
 void MAIN_body__(MAIN *data__) {
   // Initialise TEMP variables
 
-  __SET_EXTERNAL(data__->,ST0,,((!(__GET_EXTERNAL(data__->ST0,)) && (__GET_EXTERNAL(data__->ST0,) || (__GET_VAR(data__->MY_TIME,) && __GET_VAR(data__->ST5,)))) || (!(__GET_VAR(data__->ST2,)) && (__GET_EXTERNAL(data__->ST0,) || (__GET_VAR(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))))));
-  __SET_EXTERNAL(data__->,ST0,,((((!(__GET_VAR(data__->ST5,)) && !(__GET_VAR(data__->ST4,))) && !(__GET_VAR(data__->ST3,))) && !(__GET_VAR(data__->ST2,))) && !(__GET_EXTERNAL(data__->ST0,))));
-  __SET_VAR(data__->,ST2,,(!(__GET_VAR(data__->ST3,)) && (__GET_VAR(data__->ST2,) || (__GET_VAR(data__->BOXBUT,) && __GET_EXTERNAL(data__->ST0,)))));
-  __SET_VAR(data__->,ST3,,(!(__GET_VAR(data__->ST4,)) && (__GET_VAR(data__->ST3,) || (__GET_VAR(data__->BB,) && __GET_VAR(data__->ST2,)))));
-  __SET_VAR(data__->,ST4,,(!(__GET_VAR(data__->ST5,)) && (__GET_VAR(data__->ST4,) || (__GET_VAR(data__->MY_TIME,) && __GET_VAR(data__->ST3,)))));
-  __SET_VAR(data__->,ST5,,(!(__GET_EXTERNAL(data__->ST0,)) && (__GET_VAR(data__->ST5,) || (__GET_VAR(data__->BB2,) && __GET_VAR(data__->ST4,)))));
+  __SET_EXTERNAL(data__->,ST1,,((!(__GET_EXTERNAL(data__->ST0,)) && (__GET_EXTERNAL(data__->ST1,) || (__GET_VAR(data__->MY_TIME,) && __GET_EXTERNAL(data__->ST5,)))) || (!(__GET_EXTERNAL(data__->ST2,)) && (__GET_EXTERNAL(data__->ST1,) || (__GET_VAR(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))))));
+  __SET_EXTERNAL(data__->,ST0,,((((!(__GET_EXTERNAL(data__->ST5,)) && !(__GET_EXTERNAL(data__->ST4,))) && !(__GET_EXTERNAL(data__->ST3,))) && !(__GET_EXTERNAL(data__->ST2,))) && !(__GET_EXTERNAL(data__->ST1,))));
+  __SET_EXTERNAL(data__->,ST2,,(!(__GET_EXTERNAL(data__->ST3,)) && (__GET_EXTERNAL(data__->ST2,) || (__GET_VAR(data__->BOXBUT,) && __GET_EXTERNAL(data__->ST0,)))));
+  __SET_EXTERNAL(data__->,ST3,,(!(__GET_EXTERNAL(data__->ST4,)) && (__GET_EXTERNAL(data__->ST3,) || (__GET_VAR(data__->BB,) && __GET_EXTERNAL(data__->ST2,)))));
+  __SET_EXTERNAL(data__->,ST4,,(!(__GET_EXTERNAL(data__->ST5,)) && (__GET_EXTERNAL(data__->ST4,) || (__GET_VAR(data__->MY_TIME,) && __GET_EXTERNAL(data__->ST3,)))));
+  __SET_EXTERNAL(data__->,ST5,,(!(__GET_EXTERNAL(data__->ST0,)) && (__GET_EXTERNAL(data__->ST5,) || (__GET_VAR(data__->BB2,) && __GET_EXTERNAL(data__->ST4,)))));
   __SET_VAR(data__->,MOTOR,,!(__GET_EXTERNAL(data__->ST0,)));
-  __SET_VAR(data__->,MOTOR,,((((__GET_EXTERNAL(data__->ST0,) || __GET_VAR(data__->ST2,)) || __GET_VAR(data__->ST3,)) || __GET_VAR(data__->ST4,)) || __GET_VAR(data__->ST5,)));
+  __SET_VAR(data__->,MOTOR,,((((__GET_EXTERNAL(data__->ST1,) || __GET_EXTERNAL(data__->ST2,)) || __GET_EXTERNAL(data__->ST3,)) || __GET_EXTERNAL(data__->ST4,)) || __GET_EXTERNAL(data__->ST5,)));
 
   goto __end;
 
