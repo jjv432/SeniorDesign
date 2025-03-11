@@ -33,5 +33,26 @@ You will need to download the [Simulink PLC Coder](https://www.mathworks.com/hel
 
 ## Usage
 
+### MATLAB Simulations
+
+The MATLAB simulations are used to provide students an oppurtunity to learn ladder logic without being being concerned about using or damaging hardware. A number of 
+objects have been included to make the simulation as straight-forward as possible.
+
+This simulation is meant to be used for Lab 1.
+
+### Open PLC Coding
+
+Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 1 and 2.
+
+INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
+
+## Helpful Links
+
+[Open PLC Manual](https://autonomylogic.com/docs/openplc-overview/)
+
+[Memory Partitioning](https://docs.arduino.cc/tutorials/opta/memory-partitioning/)
+
+[Arduino OPTA User Manual](https://docs.arduino.cc/tutorials/opta/user-manual/)
+
 ## License
 [MIT](LICENSE) © Richard Littauer
