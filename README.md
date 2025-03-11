@@ -23,6 +23,7 @@ This project uses OpenPLC and MATLAB
 
 See [OpenPLC Download Page](https://autonomylogic.com/download) to download this software.
 
+It is not recommended to use the Arduino PLC IDE as it has demonstrated worse compatability and insufficient error-correcting documentation.
 ### MATLAB
 
 See [MATLAB Download Page](https://www.mathworks.com/help/install/ug/install-products-with-internet-connection.html) to download MATLAB if you have not already.
