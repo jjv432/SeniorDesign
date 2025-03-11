@@ -19,19 +19,19 @@ away instead of repurposed. Now, PLCs are used widely in industrial settings as 
 
 This project uses OpenPLC and MATLAB
 
-# OpenPLC
+### OpenPLC
 
 See [OpenPLC Download Page](https://autonomylogic.com/download) to download this software.
 
-# MATLAB
+### MATLAB
 
 See [MATLAB Download Page](https://www.mathworks.com/help/install/ug/install-products-with-internet-connection.html) to download MATLAB if you have not already.
 
-### Packages
+#### Packages
 
 You will need to download the [Simulink PLC Coder](https://www.mathworks.com/help//releases/R2021a/plccoder/index.html?s_tid=CRUX_lftnav) package to run the MATLAB simulations of Ladder Diagrams.
 
-## Usage
+### Usage
 
-## License
+### License
 [MIT](LICENSE) © Richard Littauer
