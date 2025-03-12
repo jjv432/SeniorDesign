@@ -48,10 +48,13 @@ void MAIN_init__(MAIN *data__, BOOL retain) {
   __INIT_EXTERNAL(BOOL,ST3,data__->ST3,retain)
   __INIT_EXTERNAL(BOOL,ST4,data__->ST4,retain)
   __INIT_EXTERNAL(BOOL,ST5,data__->ST5,retain)
-  __INIT_VAR(data__->BOXBUT,0,retain)
-  __INIT_VAR(data__->STARTBUT,0,retain)
+  __INIT_LOCATED(BOOL,__IX0_1,data__->BOXBUT,retain)
+  __INIT_LOCATED_VALUE(data__->BOXBUT,0)
+  __INIT_LOCATED(BOOL,__IX0_0,data__->STARTBUT,retain)
+  __INIT_LOCATED_VALUE(data__->STARTBUT,0)
   __INIT_VAR(data__->TIMEDN,0,retain)
-  __INIT_VAR(data__->BREAKBEAM,0,retain)
+  __INIT_LOCATED(BOOL,__IX0_2,data__->BREAKBEAM,retain)
+  __INIT_LOCATED_VALUE(data__->BREAKBEAM,0)
   __INIT_VAR(data__->BREAKBEAM2,0,retain)
   __INIT_VAR(data__->MOTOR,0,retain)
   TON_init__(&data__->TON0,retain);
@@ -61,10 +64,10 @@ void MAIN_init__(MAIN *data__, BOOL retain) {
 void MAIN_body__(MAIN *data__) {
   // Initialise TEMP variables
 
-  __SET_EXTERNAL(data__->,ST1,,(!(__GET_EXTERNAL(data__->ST2,)) && ((__GET_EXTERNAL(data__->ST1,) || (__GET_VAR(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))) || (__GET_VAR(data__->TIMEDN,) && __GET_EXTERNAL(data__->ST5,)))));
+  __SET_EXTERNAL(data__->,ST1,,(!(__GET_EXTERNAL(data__->ST2,)) && ((__GET_EXTERNAL(data__->ST1,) || (__GET_LOCATED(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))) || (__GET_VAR(data__->TIMEDN,) && __GET_EXTERNAL(data__->ST5,)))));
   __SET_EXTERNAL(data__->,ST0,,((((!(__GET_EXTERNAL(data__->ST5,)) && !(__GET_EXTERNAL(data__->ST4,))) && !(__GET_EXTERNAL(data__->ST3,))) && !(__GET_EXTERNAL(data__->ST2,))) && !(__GET_EXTERNAL(data__->ST1,))));
-  __SET_EXTERNAL(data__->,ST2,,(!(__GET_EXTERNAL(data__->ST3,)) && (__GET_EXTERNAL(data__->ST2,) || (__GET_VAR(data__->BOXBUT,) && __GET_EXTERNAL(data__->ST1,)))));
-  __SET_EXTERNAL(data__->,ST3,,(!(__GET_EXTERNAL(data__->ST4,)) && (__GET_EXTERNAL(data__->ST3,) || (__GET_VAR(data__->BREAKBEAM,) && __GET_EXTERNAL(data__->ST2,)))));
+  __SET_EXTERNAL(data__->,ST2,,(!(__GET_EXTERNAL(data__->ST3,)) && (__GET_EXTERNAL(data__->ST2,) || (__GET_LOCATED(data__->BOXBUT,) && __GET_EXTERNAL(data__->ST1,)))));
+  __SET_EXTERNAL(data__->,ST3,,(!(__GET_EXTERNAL(data__->ST4,)) && (__GET_EXTERNAL(data__->ST3,) || (__GET_LOCATED(data__->BREAKBEAM,) && __GET_EXTERNAL(data__->ST2,)))));
   __SET_EXTERNAL(data__->,ST4,,(!(__GET_EXTERNAL(data__->ST5,)) && (__GET_EXTERNAL(data__->ST4,) || (__GET_VAR(data__->TIMEDN,) && __GET_EXTERNAL(data__->ST3,)))));
   __SET_EXTERNAL(data__->,ST5,,(!(__GET_EXTERNAL(data__->ST0,)) && (__GET_EXTERNAL(data__->ST5,) || (__GET_VAR(data__->BREAKBEAM2,) && __GET_EXTERNAL(data__->ST4,)))));
   __SET_VAR(data__->,MOTOR,,!(__GET_EXTERNAL(data__->ST0,)));

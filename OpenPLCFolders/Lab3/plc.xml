@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-11T14:10:47"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-12T11:05:18">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-12T11:23:31">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -70,7 +70,7 @@
             </variable>
           </localVars>
           <localVars>
-            <variable name="My_Time">
+            <variable name="TimeDN">
               <type>
                 <BOOL/>
               </type>
@@ -78,7 +78,9 @@
                 <simpleValue value="0"/>
               </initialValue>
             </variable>
-            <variable name="BB">
+          </localVars>
+          <localVars>
+            <variable name="BreakBeam" address="%IX0.2">
               <type>
                 <BOOL/>
               </type>
@@ -86,7 +88,9 @@
                 <simpleValue value="0"/>
               </initialValue>
             </variable>
-            <variable name="BB2">
+          </localVars>
+          <localVars>
+            <variable name="BreakBeam2">
               <type>
                 <BOOL/>
               </type>
@@ -319,6 +323,12 @@
                   <position x="390" y="160"/>
                   <position x="321" y="160"/>
                 </connection>
+                <connection refLocalId="36">
+                  <position x="420" y="120"/>
+                  <position x="400" y="120"/>
+                  <position x="400" y="200"/>
+                  <position x="351" y="200"/>
+                </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
@@ -332,12 +342,6 @@
                 <connection refLocalId="6">
                   <position x="530" y="120"/>
                   <position x="441" y="120"/>
-                </connection>
-                <connection refLocalId="37">
-                  <position x="530" y="120"/>
-                  <position x="485" y="120"/>
-                  <position x="485" y="200"/>
-                  <position x="441" y="200"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
@@ -553,7 +557,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>BB</variable>
+              <variable>BreakBeam</variable>
             </contact>
             <contact localId="13" negated="false" width="21" height="20" executionOrderId="0">
               <position x="240" y="390"/>
@@ -629,7 +633,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>My_Time</variable>
+              <variable>TimeDN</variable>
             </contact>
             <contact localId="18" negated="false" width="21" height="20" executionOrderId="0">
               <position x="250" y="510"/>
@@ -705,7 +709,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>BB2</variable>
+              <variable>BreakBeam2</variable>
             </contact>
             <contact localId="23" negated="false" width="21" height="20" executionOrderId="0">
               <position x="240" y="630"/>
@@ -761,27 +765,7 @@
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>My_Time</variable>
-            </contact>
-            <contact localId="37" negated="true" width="21" height="20">
-              <position x="420" y="190"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="36">
-                  <position x="420" y="200"/>
-                  <position x="351" y="200"/>
-                </connection>
-                <connection refLocalId="5">
-                  <position x="420" y="200"/>
-                  <position x="390" y="200"/>
-                  <position x="390" y="160"/>
-                  <position x="321" y="160"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>St0</variable>
+              <variable>TimeDN</variable>
             </contact>
             <leftPowerRail localId="38" width="10" height="800">
               <position x="660" y="60"/>
@@ -879,9 +863,9 @@
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="300"/>
-                <connection refLocalId="51">
+                <connection refLocalId="53">
                   <position x="1030" y="360"/>
-                  <position x="950" y="360"/>
+                  <position x="930" y="360"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
@@ -1093,7 +1077,7 @@
                     <relPosition x="0" y="30"/>
                     <connection refLocalId="49">
                       <position x="790" y="360"/>
-                      <position x="730" y="360"/>
+                      <position x="731" y="360"/>
                     </connection>
                   </connectionPointIn>
                 </variable>
@@ -1123,27 +1107,27 @@
                 </variable>
               </outputVariables>
             </block>
-            <coil localId="51" negated="false" width="21" height="20">
-              <position x="930" y="350"/>
+            <inVariable localId="52" width="80" height="30" negated="false">
+              <position x="690" y="400"/>
+              <connectionPointOut>
+                <relPosition x="80" y="20"/>
+              </connectionPointOut>
+              <expression>T#2000ms</expression>
+            </inVariable>
+            <coil localId="53" negated="false" width="21" height="20">
+              <position x="910" y="350"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="50" formalParameter="Q">
-                  <position x="930" y="360"/>
+                  <position x="910" y="360"/>
                   <position x="840" y="360"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>St4</variable>
+              <variable>TimeDN</variable>
             </coil>
-            <inVariable localId="52" width="80" height="30" negated="false">
-              <position x="690" y="400"/>
-              <connectionPointOut>
-                <relPosition x="80" y="20"/>
-              </connectionPointOut>
-              <expression>T#1000ms</expression>
-            </inVariable>
           </LD>
         </body>
       </pou>

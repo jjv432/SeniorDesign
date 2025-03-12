@@ -31,14 +31,14 @@ PROGRAM main
     St5 : BOOL;
   END_VAR
   VAR
-    BoxBut : BOOL := 0;
-    StartBut : BOOL := 0;
+    BoxBut AT %IX0.1 : BOOL := 0;
+    StartBut AT %IX0.0 : BOOL := 0;
   END_VAR
   VAR
     TimeDN : BOOL := 0;
   END_VAR
   VAR
-    BreakBeam : BOOL := 0;
+    BreakBeam AT %IX0.2 : BOOL := 0;
   END_VAR
   VAR
     BreakBeam2 : BOOL := 0;
