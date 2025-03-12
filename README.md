@@ -9,7 +9,7 @@ are a number of learning tools, including MATLAB simulation tools, instructions 
 
 - [Background](#background) 
 - [Install](#install) 
- - [1. Download OpenPLC](#1. Download OpenPLC)
+ - [1. Download OpenPLC](#{1. Download OpenPLC})
  - [2. Download MATLAB](#2. Download MATLAB)
   - [2.a. Packages](#2. a. Packages)
  - [Download Arduino IDE](#Download Arduino IDE)
