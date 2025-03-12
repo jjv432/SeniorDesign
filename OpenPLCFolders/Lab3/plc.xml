@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-11T14:10:47"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-12T11:23:31">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-12T11:39:07">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -88,9 +88,7 @@
                 <simpleValue value="0"/>
               </initialValue>
             </variable>
-          </localVars>
-          <localVars>
-            <variable name="BreakBeam2">
+            <variable name="BreakBeam2" address="%IX0.3">
               <type>
                 <BOOL/>
               </type>
@@ -98,6 +96,8 @@
                 <simpleValue value="0"/>
               </initialValue>
             </variable>
+          </localVars>
+          <localVars>
             <variable name="Motor">
               <type>
                 <BOOL/>
@@ -1112,7 +1112,7 @@
               <connectionPointOut>
                 <relPosition x="80" y="20"/>
               </connectionPointOut>
-              <expression>T#2000ms</expression>
+              <expression>T#1000ms</expression>
             </inVariable>
             <coil localId="53" negated="false" width="21" height="20">
               <position x="910" y="350"/>

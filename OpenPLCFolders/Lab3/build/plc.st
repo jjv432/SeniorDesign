@@ -39,9 +39,9 @@ PROGRAM main
   END_VAR
   VAR
     BreakBeam AT %IX0.2 : BOOL := 0;
+    BreakBeam2 AT %IX0.3 : BOOL := 0;
   END_VAR
   VAR
-    BreakBeam2 : BOOL := 0;
     Motor : BOOL := 0;
     TON0 : TON;
   END_VAR

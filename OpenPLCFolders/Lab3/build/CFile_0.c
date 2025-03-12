@@ -124,14 +124,18 @@ void sketch_setup() {
 
   lcd.init();
 
-  lcd.backlight();
+  lcd.backlight();
+
+lcd.setCursor(0, 0);
+
+lcd.print("In State:");
 }
 
 void sketch_loop() {
 
-lcd.setCursor(0, 0);
 
-lcd.print("In State:");
+lcd.setCursor(0,1);
+lcd.print(" ");
 lcd.setCursor(0,1);
 
 
@@ -182,7 +186,8 @@ case 0b100000:
 }
 
 
-delay(500);
+delay(100);
+
 
 lcd.clear();
 
