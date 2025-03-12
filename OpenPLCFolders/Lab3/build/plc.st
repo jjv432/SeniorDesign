@@ -31,9 +31,7 @@ PROGRAM main
     St5 : BOOL;
   END_VAR
   VAR
-    BoxBut : BOOL := 0;
-  END_VAR
-  VAR
+    BoxBut AT %IX0.1 : BOOL := 0;
     StartBut AT %IX0.0 : BOOL := 0;
   END_VAR
   VAR
@@ -41,16 +39,19 @@ PROGRAM main
     BB : BOOL := 0;
     BB2 : BOOL := 0;
     Motor : BOOL := 0;
+    TON0 : TON;
   END_VAR
 
   St1 := NOT(St0) AND (St1 OR My_Time AND St5) OR NOT(St2) AND (St1 OR StartBut AND St0);
   St0 := NOT(St5) AND NOT(St4) AND NOT(St3) AND NOT(St2) AND NOT(St1);
-  St2 := NOT(St3) AND (St2 OR BoxBut AND St0);
+  St2 := NOT(St3) AND (St2 OR BoxBut AND St1);
   St3 := NOT(St4) AND (St3 OR BB AND St2);
   St4 := NOT(St5) AND (St4 OR My_Time AND St3);
   St5 := NOT(St0) AND (St5 OR BB2 AND St4);
   Motor := NOT(St0);
   Motor := St1 OR St2 OR St3 OR St4 OR St5;
+  TON0(IN := St3, PT := T#1000ms);
+  St4 := TON0.Q;
 END_PROGRAM
 
 
@@ -65,6 +66,9 @@ CONFIGURATION Config0
   END_VAR
 
   RESOURCE Res0 ON PLC
+    VAR_GLOBAL
+      LocalVar0 : DINT;
+    END_VAR
     TASK task0(INTERVAL := T#20ms,PRIORITY := 0);
     PROGRAM instance0 WITH task0 : main;
   END_RESOURCE

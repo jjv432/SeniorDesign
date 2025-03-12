@@ -47,6 +47,15 @@ Examples are provided for Ladder Logic diagrams that can be used as Solutions to
 
 INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
+
+## Lab Manuals
+
+Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual]()
+
+Lab 2: Conveyor actuation lab using two buttons and the OPTA. [manual]()
+
+Lab 3: Competition between user and PLC for pushing boxes off of the conveyor belt. [manual]()
+
 ## Helpful Links
 
 [Open PLC Manual](https://autonomylogic.com/docs/openplc-overview/)
@@ -55,5 +64,16 @@ INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
 [Arduino OPTA User Manual](https://docs.arduino.cc/tutorials/opta/user-manual/)
 
+## Troubleshooting
+
+Error:
+
+```
+Failed uploading: uploading error: exit status 74
+
+```
+Solution:
+
+Press the 'reset' button on the top of the OPTA. You will need to use a pen or something thin to access the button.
 ## License
 [MIT](LICENSE) © Richard Littauer
