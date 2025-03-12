@@ -19,18 +19,24 @@ away instead of repurposed. Now, PLCs are used widely in industrial settings as 
 
 This project uses OpenPLC and MATLAB
 
-### OpenPLC
+### 1. Download OpenPLC
 
 See [OpenPLC Download Page](https://autonomylogic.com/download) to download this software.
 
 It is not recommended to use the Arduino PLC IDE as it has demonstrated worse compatability and insufficient error-correcting documentation.
-### MATLAB
+### 2. Download MATLAB
 
 See [MATLAB Download Page](https://www.mathworks.com/help/install/ug/install-products-with-internet-connection.html) to download MATLAB if you have not already.
 
-#### Packages
+#### 2.a. Packages
 
 You will need to download the [Simulink PLC Coder](https://www.mathworks.com/help//releases/R2021a/plccoder/index.html?s_tid=CRUX_lftnav) package to run the MATLAB simulations of Ladder Diagrams.
+
+### 3. Download Arduino IDE
+
+You will need to download the Arduino IDE in order to [partition the memory](https://autonomylogic.com/docs/2-4-physical-addressing/). Follow the steps at the 
+provided link to partition the memory on the PLC, a step that is necessary to allow Arduino sketches and Ladder Logic sketches to exist simultaneously. This is 
+useful as it allows us to use Arduino packages such as LiquidCrystalI2c.
 
 ## Usage
 
@@ -64,6 +70,7 @@ Lab 3: Competition between user and PLC for pushing boxes off of the conveyor be
 
 [Arduino OPTA User Manual](https://docs.arduino.cc/tutorials/opta/user-manual/)
 
+[Arduino OPTA Memory Addresses](https://autonomylogic.com/docs/2-4-physical-addressing/)
 ## Troubleshooting
 
 Error:
