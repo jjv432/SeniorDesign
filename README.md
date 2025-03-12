@@ -7,19 +7,21 @@ are a number of learning tools, including MATLAB simulation tools, instructions 
 
 ## Table of Contents
 
-- [Background](#background) 
-- [Install](#install) 
- - [1. Download OpenPLC](#{1. Download OpenPLC})
- - [2. Download MATLAB](#2. Download MATLAB)
-  - [2.a. Packages](#2. a. Packages)
- - [Download Arduino IDE](#Download Arduino IDE)
-- [Usage](#Usage)
- - [MATLAB Simulations](#Matlab Simulations)
- - [Open PLC Coding](#Open PLC Coding)
-- [Lab Setups](#Lab Setups)
-- [Helpful Links](#Helpful Links)
-- [Troubleshooting](#Troubleshooting)
-- [License](#License)
+- [Background](#background)
+- [Install](#install)
+  * [1. Download OpenPLC](#1-download-openplc)
+  * [2. Download MATLAB](#2-download-matlab)
+    + [2.a. Packages](#2a-packages)
+  * [3. Download Arduino IDE](#3-download-arduino-ide)
+- [Usage](#usage)
+  * [MATLAB Simulations](#matlab-simulations)
+  * [Open PLC Coding](#open-plc-coding)
+- [Lab Setups](#lab-setups)
+- [Helpful Links](#helpful-links)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 	
 ## Background
 
