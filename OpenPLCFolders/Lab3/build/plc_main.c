@@ -106,6 +106,8 @@ IEC_BOOL var2;
 IEC_BOOL *__IX0_2 = &var2;
 IEC_BOOL var3;
 IEC_BOOL *__IX0_3 = &var3;
+IEC_BOOL var4;
+IEC_BOOL *__IX0_4 = &var4;
 /**
  * Win32 specific code
  **/

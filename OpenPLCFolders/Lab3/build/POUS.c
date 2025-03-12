@@ -57,6 +57,8 @@ void MAIN_init__(MAIN *data__, BOOL retain) {
   __INIT_LOCATED_VALUE(data__->BREAKBEAM,0)
   __INIT_LOCATED(BOOL,__IX0_3,data__->BREAKBEAM2,retain)
   __INIT_LOCATED_VALUE(data__->BREAKBEAM2,0)
+  __INIT_LOCATED(BOOL,__IX0_4,data__->STOPBUT,retain)
+  __INIT_LOCATED_VALUE(data__->STOPBUT,0)
   __INIT_VAR(data__->MOTOR,0,retain)
   TON_init__(&data__->TON0,retain);
 }
@@ -65,8 +67,7 @@ void MAIN_init__(MAIN *data__, BOOL retain) {
 void MAIN_body__(MAIN *data__) {
   // Initialise TEMP variables
 
-  __SET_EXTERNAL(data__->,ST1,,(!(__GET_EXTERNAL(data__->ST2,)) && ((__GET_EXTERNAL(data__->ST1,) || (__GET_LOCATED(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))) || (__GET_VAR(data__->TIMEDN,) && __GET_EXTERNAL(data__->ST5,)))));
-  __SET_EXTERNAL(data__->,ST0,,((((!(__GET_EXTERNAL(data__->ST5,)) && !(__GET_EXTERNAL(data__->ST4,))) && !(__GET_EXTERNAL(data__->ST3,))) && !(__GET_EXTERNAL(data__->ST2,))) && !(__GET_EXTERNAL(data__->ST1,))));
+  __SET_EXTERNAL(data__->,ST0,,(__GET_LOCATED(data__->STOPBUT,) || ((((!(__GET_EXTERNAL(data__->ST5,)) && !(__GET_EXTERNAL(data__->ST4,))) && !(__GET_EXTERNAL(data__->ST3,))) && !(__GET_EXTERNAL(data__->ST2,))) && !(__GET_EXTERNAL(data__->ST1,)))));
   __SET_EXTERNAL(data__->,ST2,,(!(__GET_EXTERNAL(data__->ST3,)) && (__GET_EXTERNAL(data__->ST2,) || (__GET_LOCATED(data__->BOXBUT,) && __GET_EXTERNAL(data__->ST1,)))));
   __SET_EXTERNAL(data__->,ST3,,(!(__GET_EXTERNAL(data__->ST4,)) && (__GET_EXTERNAL(data__->ST3,) || (__GET_LOCATED(data__->BREAKBEAM,) && __GET_EXTERNAL(data__->ST2,)))));
   __SET_EXTERNAL(data__->,ST4,,(!(__GET_EXTERNAL(data__->ST5,)) && (__GET_EXTERNAL(data__->ST4,) || (__GET_VAR(data__->TIMEDN,) && __GET_EXTERNAL(data__->ST3,)))));
@@ -74,9 +75,10 @@ void MAIN_body__(MAIN *data__) {
   __SET_VAR(data__->,MOTOR,,!(__GET_EXTERNAL(data__->ST0,)));
   __SET_VAR(data__->,MOTOR,,((((__GET_EXTERNAL(data__->ST1,) || __GET_EXTERNAL(data__->ST2,)) || __GET_EXTERNAL(data__->ST3,)) || __GET_EXTERNAL(data__->ST4,)) || __GET_EXTERNAL(data__->ST5,)));
   __SET_VAR(data__->TON0.,IN,,__GET_EXTERNAL(data__->ST3,));
-  __SET_VAR(data__->TON0.,PT,,__time_to_timespec(1, 2000, 0, 0, 0, 0));
+  __SET_VAR(data__->TON0.,PT,,__time_to_timespec(1, 1000, 0, 0, 0, 0));
   TON_body__(&data__->TON0);
   __SET_VAR(data__->,TIMEDN,,__GET_VAR(data__->TON0.Q,));
+  __SET_EXTERNAL(data__->,ST1,,(!(__GET_EXTERNAL(data__->ST2,)) && (__GET_EXTERNAL(data__->ST1,) || (__GET_LOCATED(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,)))));
 
   goto __end;
 
