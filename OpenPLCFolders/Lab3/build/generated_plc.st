@@ -19,7 +19,7 @@ PROGRAM main
     TON0 : TON;
   END_VAR
 
-  St1 := NOT(St0) AND (St1 OR My_Time AND St5) OR NOT(St2) AND (St1 OR StartBut AND St0);
+  St1 := NOT(St2) AND (St1 OR My_Time AND St5 OR StartBut AND St0);
   St0 := NOT(St5) AND NOT(St4) AND NOT(St3) AND NOT(St2) AND NOT(St1);
   St2 := NOT(St3) AND (St2 OR BoxBut AND St1);
   St3 := NOT(St4) AND (St3 OR BB AND St2);

@@ -138,8 +138,6 @@ lcd.setCursor(0,1);
 
 state_buffer = St0 + St1*(1<<1) + St2*(1<<2) + St3*(1<<3) + St4*(1<<4) + St5*(1<<5);
 
-
-/*
 switch(state_buffer){
 
 
@@ -181,10 +179,8 @@ case 0b100000:
     break;
 
 }
-
-*/
 
-lcd.print(state_buffer);
+
 delay(500);
 
 lcd.clear();

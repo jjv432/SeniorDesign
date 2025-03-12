@@ -63,7 +63,7 @@ void MAIN_init__(MAIN *data__, BOOL retain) {
 void MAIN_body__(MAIN *data__) {
   // Initialise TEMP variables
 
-  __SET_EXTERNAL(data__->,ST1,,((!(__GET_EXTERNAL(data__->ST0,)) && (__GET_EXTERNAL(data__->ST1,) || (__GET_VAR(data__->MY_TIME,) && __GET_EXTERNAL(data__->ST5,)))) || (!(__GET_EXTERNAL(data__->ST2,)) && (__GET_EXTERNAL(data__->ST1,) || (__GET_LOCATED(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))))));
+  __SET_EXTERNAL(data__->,ST1,,(!(__GET_EXTERNAL(data__->ST2,)) && ((__GET_EXTERNAL(data__->ST1,) || (__GET_VAR(data__->MY_TIME,) && __GET_EXTERNAL(data__->ST5,))) || (__GET_LOCATED(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,)))));
   __SET_EXTERNAL(data__->,ST0,,((((!(__GET_EXTERNAL(data__->ST5,)) && !(__GET_EXTERNAL(data__->ST4,))) && !(__GET_EXTERNAL(data__->ST3,))) && !(__GET_EXTERNAL(data__->ST2,))) && !(__GET_EXTERNAL(data__->ST1,))));
   __SET_EXTERNAL(data__->,ST2,,(!(__GET_EXTERNAL(data__->ST3,)) && (__GET_EXTERNAL(data__->ST2,) || (__GET_LOCATED(data__->BOXBUT,) && __GET_EXTERNAL(data__->ST1,)))));
   __SET_EXTERNAL(data__->,ST3,,(!(__GET_EXTERNAL(data__->ST4,)) && (__GET_EXTERNAL(data__->ST3,) || (__GET_VAR(data__->BB,) && __GET_EXTERNAL(data__->ST2,)))));
