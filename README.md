@@ -7,9 +7,20 @@ are a number of learning tools, including MATLAB simulation tools, instructions 
 
 ## Table of Contents
 
-- [Background](#background)
-- [Install](#install)
-
+- [Background](#background) 
+- [Install](#install) 
+ - [1. Download OpenPLC](#1. Download OpenPLC)
+ - [2. Download MATLAB](#2. Download MATLAB)
+  - [2.a. Packages](#2. a. Packages)
+ - [Download Arduino IDE](#Download Arduino IDE)
+- [Usage](#Usage)
+ - [MATLAB Simulations](#Matlab Simulations)
+ - [Open PLC Coding](#Open PLC Coding)
+- [Lab Setups](#Lab Setups)
+- [Helpful Links](#Helpful Links)
+- [Troubleshooting](#Troubleshooting)
+- [License](#License)
+	
 ## Background
 
 PLC's were developed to replace physical relays. Previously, rewiring relays was a time consuming process that led to waste as boards would frequently be thrown 
@@ -54,7 +65,7 @@ Examples are provided for Ladder Logic diagrams that can be used as Solutions to
 INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
 
-## Lab Manuals
+## Lab Setups
 
 Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual]()
 
