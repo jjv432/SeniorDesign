@@ -186,9 +186,12 @@ state = 5;
 
 }
 
-if (state != last_state){
-lcd.setCursor(0,1);
-lcd.print(" ");
+if (state != last_state){
+
+lcd.setCursor(0,1);
+
+lcd.print(" ");
+
 lcd.setCursor(0,1);
 lcd.print(state);
 }

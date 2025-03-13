@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-11T14:10:47"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-12T12:51:40">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-12T14:33:05">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -104,7 +104,7 @@
                 <simpleValue value="0"/>
               </initialValue>
             </variable>
-            <variable name="Motor" address="%QX0.0">
+            <variable name="Motor" address="%QX0.1">
               <type>
                 <BOOL/>
               </type>
@@ -118,6 +118,16 @@
               <type>
                 <derived name="TON"/>
               </type>
+            </variable>
+          </localVars>
+          <localVars>
+            <variable name="LinearAct" address="%QX0.2">
+              <type>
+                <BOOL/>
+              </type>
+              <initialValue>
+                <simpleValue value="0"/>
+              </initialValue>
             </variable>
           </localVars>
         </interface>
@@ -769,7 +779,7 @@
                 <relPosition x="0" y="300"/>
                 <connection refLocalId="53">
                   <position x="1030" y="360"/>
-                  <position x="930" y="360"/>
+                  <position x="931" y="360"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
@@ -780,6 +790,10 @@
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="420"/>
+                <connection refLocalId="56">
+                  <position x="1030" y="480"/>
+                  <position x="930" y="480"/>
+                </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="460"/>
@@ -1122,6 +1136,34 @@
               </connectionPointOut>
               <variable>St1</variable>
             </contact>
+            <contact localId="55" negated="false" width="21" height="20">
+              <position x="730" y="470"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="38">
+                  <position x="730" y="480"/>
+                  <position x="670" y="480"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>St4</variable>
+            </contact>
+            <coil localId="56" negated="false" width="21" height="20">
+              <position x="910" y="470"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="55">
+                  <position x="910" y="480"/>
+                  <position x="751" y="480"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>LinearAct</variable>
+            </coil>
           </LD>
         </body>
       </pou>

@@ -41,10 +41,13 @@ PROGRAM main
     BreakBeam AT %IX0.2 : BOOL := 0;
     BreakBeam2 AT %IX0.3 : BOOL := 0;
     StopBut AT %IX0.4 : BOOL := 0;
+    Motor AT %QX0.1 : BOOL := 0;
   END_VAR
   VAR
-    Motor : BOOL := 0;
     TON0 : TON;
+  END_VAR
+  VAR
+    LinearAct AT %QX0.2 : BOOL := 0;
   END_VAR
 
   St0 := StopBut OR NOT(St5) AND NOT(St4) AND NOT(St3) AND NOT(St2) AND NOT(St1);
@@ -57,6 +60,7 @@ PROGRAM main
   TON0(IN := St3, PT := T#1000ms);
   TimeDN := TON0.Q;
   St1 := NOT(St2) AND (St1 OR StartBut AND St0);
+  LinearAct := St4;
 END_PROGRAM
 
 
