@@ -114,8 +114,11 @@ void sketch_loop()
 
 #include <Arduino_ConnectionHandler.h>
 
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h>
+
 int state_buffer = 0;
+int state = 0;
+int last_state = -1;
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
@@ -124,42 +127,79 @@ void sketch_setup() {
   lcd.init();
 
   lcd.backlight();
-}
-
-void sketch_loop() {
 
 lcd.setCursor(0, 0);
 
 lcd.print("In State:");
-lcd.setCursor(0,1);
-
-state_buffer = St0 + St1*(1<<1) + St2*(1<<2) + St3*(1<<3) + St4*(1<<4) + St5*(1<<5);
-
-switch(state_buffer){
-
-case 0b1:
-    lcd.print("0");
-    break;
-case 0b10:
-    lcd.print("1");
-    break;
-case 0b100:
-    lcd.print("2");
-    break;
-case 0b1000:
-    lcd.print("3");
-    break;
-case 0b10000:
-    lcd.print("4");
-    break;
-case 0b100000:
-    lcd.print("5");
-    break;
-}
-
+}
 
-delay(500);
-lcd.clear();
+void sketch_loop() {
 
+
+
+
+
+
+state_buffer = St0 + St1*(1<<1) + St2*(1<<2) + St3*(1<<3) + St4*(1<<4) + St5*(1<<5);
+
+switch(state_buffer){
+
+
+
+case 0b1:
+
+    //lcd.print("0");
+state = 0;
+
+    break;
+
+case 0b10:
+
+    //lcd.print("1");
+state = 1;
+
+    break;
+
+case 0b100:
+
+    //lcd.print("2");
+state = 2;
+
+    break;
+
+case 0b1000:
+
+    //lcd.print("3");
+state = 3;
+
+    break;
+
+case 0b10000:
+
+    //lcd.print("4");
+state = 4;
+
+    break;
+
+case 0b100000:
+
+    //lcd.print("5");
+state = 5;
+
+    break;
+
+}
+
+if (state != last_state){
+
+lcd.setCursor(0,1);
+
+lcd.print(" ");
+
+lcd.setCursor(0,1);
+lcd.print(state);
+}
+
+last_state = state;
 }
 #endif
