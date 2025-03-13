@@ -187,4 +187,5 @@ Solution:
 
 Press the 'reset' button on the top of the OPTA. You will need to use a pen or something thin to access the button.
 ## License
-[MIT](LICENSE) © Richard Littauer
+[MIT](LICENSE) © Jack Vranicar
+
