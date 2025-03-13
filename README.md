@@ -14,14 +14,23 @@ are a number of learning tools, including MATLAB simulation tools, instructions 
     + [2.a. Packages](#2a-packages)
   * [3. Download Arduino IDE](#3-download-arduino-ide)
 - [Usage](#usage)
-  * [MATLAB Simulations](#matlab-simulations)
+  * [MATLAB: Simulations](#matlab--simulations)
   * [Open PLC Coding](#open-plc-coding)
+- [MATLAB Functions](#matlab-functions)
+  * [edit_simulink_plc.m](#edit-simulink-plcm)
+  * [run_simulink_plc.m;](#run-simulink-plcm-)
+- [MATLAB Objects](#matlab-objects)
+  * [box.m](#boxm)
+  * [LED.m](#ledm)
+  * [motor.m](#motorm)
+  * [conveyor_assembly.m](#conveyor-assemblym)
 - [Lab Setups](#lab-setups)
 - [Helpful Links](#helpful-links)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 	
 ## Background
 
