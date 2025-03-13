@@ -88,7 +88,7 @@ used in the current directory).
 
 __Outputs__: N/a
 
-### run_simulink_plc(<FILENAME>);
+### run_simulink_plc.m;
 ```
 >> <OUT> = run_simulink_plc(<FILENAME>);
 ```
@@ -106,6 +106,38 @@ used in the current directory).
 
 __Outputs__: If created in the Simulink file, the 'out' structure that is generated 
 using a "to workspace" block in the highest level of the PLC Simulation.
+
+## MATLAB Objects 
+
+There are also some MATLAB objects that are provided to allow for ease of simulation 
+using Simulink. These objects provide a way to animate the outputs of the Simulink 
+file.
+
+Notes: for an object, _methods_ are functions that the object can complete. For 
+example, this could be turning on and off the LED for the LED object. _Properties_ 
+are characteristics of the object that the object stores. A simple example of this 
+would be X-Position.
+
+### box.m
+ __Overview__:
+ __Methods__:
+ __Properties__:
+
+### LED.m
+ __Overview__:
+ __Methods__:
+ __Properties__:
+
+### motor.m
+ __Overview__:
+ __Methods__:
+ __Properties__:
+
+### conveyor_assembly.m
+ __Overview__:
+ __Methods__:
+ __Properties__:
+
 
 ## Lab Setups
 
