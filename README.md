@@ -43,6 +43,7 @@ See [MATLAB Download Page](https://www.mathworks.com/help/install/ug/install-pro
 
 #### 2.a. Packages
 
+You will need to download [Simulink](https://www.mathworks.com/products/simulink.html)
 You will need to download the [Simulink PLC Coder](https://www.mathworks.com/help//releases/R2021a/plccoder/index.html?s_tid=CRUX_lftnav) package to run the MATLAB simulations of Ladder Diagrams.
 
 ### 3. Download Arduino IDE
@@ -120,22 +121,30 @@ would be X-Position.
 
 ### box.m
  __Overview__:
+
  __Methods__:
+
  __Properties__:
 
 ### LED.m
  __Overview__:
+
  __Methods__:
+
  __Properties__:
 
 ### motor.m
  __Overview__:
+
  __Methods__:
+
  __Properties__:
 
 ### conveyor_assembly.m
  __Overview__:
+
  __Methods__:
+
  __Properties__:
 
 
