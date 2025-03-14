@@ -159,12 +159,12 @@ would be X-Position.
 
 ## Lab Setups
 
-Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual]()
+Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual](Resources/LabManuals/Lab1Manual.txt)
 
-Lab 2: Conveyor actuation lab using two buttons and the OPTA. [manual]()
+Lab 2: Conveyor actuation lab using two buttons and the OPTA. [manual](Resources/LabManuals/Lab2Manual.txt)
 
 
-Lab 3: Competition between user and PLC for pushing boxes off of the conveyor belt. [manual]()
+Lab 3: Competition between user and PLC for pushing boxes off of the conveyor belt. [manual](Resources/LabManuals/Lab3Manual.txt)
 
 ## Helpful Links
 
@@ -177,15 +177,29 @@ Lab 3: Competition between user and PLC for pushing boxes off of the conveyor be
 [Arduino OPTA Memory Addresses](https://autonomylogic.com/docs/2-4-physical-addressing/)
 ## Troubleshooting
 
-Error:
+__Error:__
 
 ```
 Failed uploading: uploading error: exit status 74
 
 ```
-Solution:
+__Solution:__
 
 Press the 'reset' button on the top of the OPTA. You will need to use a pen or something thin to access the button.
+
+__Error:__
+
+```
+Unrecognized function or variable 'BOOL'
+
+```
+__Solution:__
+
+The PLC types required have not been loaded. Run: 
+```
+>> plcloadtypes
+```
+
 ## License
 [MIT](LICENSE) © Jack Vranicar
 
