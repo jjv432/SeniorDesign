@@ -159,7 +159,7 @@ would be X-Position.
 
 ## Lab Setups
 
-Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual]()
+Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual](Resources/LabManuals/Lab1Manual.txt)
 
 Lab 2: Conveyor actuation lab using two buttons and the OPTA. [manual]()
 
