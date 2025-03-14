@@ -161,10 +161,10 @@ would be X-Position.
 
 Lab 1: Simulation lab using only the simulation tools that we have developed in MATLAB [manual](Resources/LabManuals/Lab1Manual.txt)
 
-Lab 2: Conveyor actuation lab using two buttons and the OPTA. [manual]()
+Lab 2: Conveyor actuation lab using two buttons and the OPTA. [manual](Resources/LabManuals/Lab2Manual.txt)
 
 
-Lab 3: Competition between user and PLC for pushing boxes off of the conveyor belt. [manual]()
+Lab 3: Competition between user and PLC for pushing boxes off of the conveyor belt. [manual](Resources/LabManuals/Lab3Manual.txt)
 
 ## Helpful Links
 
