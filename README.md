@@ -79,7 +79,6 @@ Examples are provided for Ladder Logic diagrams that can be used as Solutions to
 INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
 >[!WARNING]
-
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
 > connected to 12-24V at it's power input terminals.
 
@@ -128,7 +127,6 @@ using Simulink. These objects provide a way to animate the outputs of the Simuli
 file.
 
 >[!NOTE]
-
 > For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. _Properties_ are 
 >characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and properties are accesses via dot notation. A 
 >_constructor_ is used to initialize an object. See the course [Object-Oriented Programming in 
