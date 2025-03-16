@@ -81,7 +81,7 @@ INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
 ## MATLAB Functions
 
-There are a number of useful functions and objects provided to make the process of 
+There are a number of useful functions provided to make the process of 
 learning ladder logic smoother. All of these exist in the _src_ folder of this repo.
 
 ### edit_simulink_plc.m
@@ -91,7 +91,7 @@ learning ladder logic smoother. All of these exist in the _src_ folder of this r
  __Overview__: This function helps in editing a Simulink PLC simulation by: 
 running the _plcloadtypes_ command which is necessary for the Ladder Logic to 
 execute; opens the Simulink PLC Ladder Library, which contains all of the PLC 
-Simulink blocks; and opens or a creates a Simulink file called #<FILENAME>.
+Simulink blocks; and opens or a creates a Simulink file called \<FILENAME>\.
 
 __Inputs__: A filename, either of an already existing Simulink file in the current 
 directory, or the name of a new Simulink file (if that filename is not already being 
@@ -107,15 +107,14 @@ __Outputs__: N/a
  __Overview__: This function helps in running a simulink PLC simulation by: running 
 the _plcloadtypes_ command which is necessary for the Ladder Logic to execute; opens 
 the Simulink PLC Ladder Library, which contains all of the PLC Simulink blocks; and 
-runs a Simulink file called <FILENAME>. If <FILENAME> does not exist in the 
-currently directory, the user will be prompted to edit the file, similar to _edit_ 
-_simulink_ _plc_.
+runs a Simulink file called \<FILENAME>\. If \<FILENAME>\ does not exist in the 
+currently directory, the user will be prompted to edit the file, similar to *edit_simulink_plc*.
 
 __Inputs__: A filename, either of an already existing Simulink file in the current 
 directory, or the name of a new Simulink file (if that filename is not already being 
 used in the current directory).
 
-__Outputs__: If created in the Simulink file, the 'out' structure that is generated 
+__Outputs__: If created in the Simulink file, the "out" structure that is generated 
 using a "to workspace" block in the highest level of the PLC Simulation.
 
 ## MATLAB Objects 
@@ -124,13 +123,23 @@ There are also some MATLAB objects that are provided to allow for ease of simula
 using Simulink. These objects provide a way to animate the outputs of the Simulink 
 file.
 
-Notes: for an object, _methods_ are functions that the object can complete. For 
-example, this could be turning on and off the LED for the LED object. _Properties_ 
-are characteristics of the object that the object stores. A simple example of this 
-would be X-Position.
+>[!NOTE]
+
+>For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. _Properties_ are 
+>characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and properties are accesses via dot notation.
 
 ### box.m
  __Overview__:
+
+The _box_ object is used to animate the motion of a 2D box on a conveyor belt. 
+
+__Constructor__:
+
+A box object can be created as follows: 
+
+```
+>> <Example_Box> = box(<HEIGHT>, <WIDTH>, <Initial_X_Position>, <Initial_Y_Position>);
+```
 
  __Methods__:
 
