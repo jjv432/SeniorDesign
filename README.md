@@ -123,9 +123,11 @@ There are also some MATLAB objects that are provided to allow for ease of simula
 using Simulink. These objects provide a way to animate the outputs of the Simulink 
 file.
 
->[!NOTE]
->For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. _Properties_ are 
->characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and properties are accesses via dot notation.
+>[!NOTE] For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. _Properties_ 
+>are characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and properties are accesses via dot notation. 
+>A _constructor_ is used to initialize an object. See the course [Object-Oriented Programming in 
+>MATLAB](https://www.mathworks.com/products/matlab/object-oriented-programming.html) or the tutorial [Introduction to Object-Oriented Programming in 
+>MATLAB](https://www.mathworks.com/company/technical-articles/introduction-to-object-oriented-programming-in-matlab.html) for more.
 
 ### box.m
  __Overview__:
