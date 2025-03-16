@@ -53,27 +53,28 @@ See [MATLAB Download Page](https://www.mathworks.com/help/install/ug/install-pro
 #### 2.a. Packages
 
 You will need to download [Simulink](https://www.mathworks.com/products/simulink.html)
+
 You will need to download the [Simulink PLC Coder](https://www.mathworks.com/help//releases/R2021a/plccoder/index.html?s_tid=CRUX_lftnav) package to run the MATLAB simulations of Ladder Diagrams.
 
 ### 3. Download Arduino IDE
 
 You will need to download the Arduino IDE in order to [partition the memory](https://autonomylogic.com/docs/2-4-physical-addressing/). Follow the steps at the 
 provided link to partition the memory on the PLC, a step that is necessary to allow Arduino sketches and Ladder Logic sketches to exist simultaneously. This is 
-useful as it allows us to use Arduino packages such as LiquidCrystalI2c.
+useful as it allows us to use Arduino packages such as _LiquidCrystalI2c_.
 
 ## Usage
 
 ### MATLAB: Simulations
 
 The MATLAB simulations are used to provide students an oppurtunity to learn ladder logic without being being concerned about using or damaging hardware. A number of 
-objects have been included to make the simulation as straight-forward as possible.
+objects and functions have been included to make the simulation as straight-forward as possible.
 
-This simulation is meant to be used for Lab 1.
+For Lab 1, only the simulation tools will be used. For Labs 2 and 3, students may choose to use the simulation to debug their logic, but it is not required.
 
 
 ### Open PLC Coding
 
-Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 1 and 2.
+Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 2 and 3.
 
 INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
@@ -87,10 +88,10 @@ learning ladder logic smoother. All of these exist in the _src_ folder of this r
 ```
 >> edit_simulink_plc(<FILENAME>);
 ```
- __Overview__: This function helps in editing a simulink PLC simulation by: 
+ __Overview__: This function helps in editing a Simulink PLC simulation by: 
 running the _plcloadtypes_ command which is necessary for the Ladder Logic to 
 execute; opens the Simulink PLC Ladder Library, which contains all of the PLC 
-Simulink blocks; and opens or a creates a Simulink file called <FILENAME>.
+Simulink blocks; and opens or a creates a Simulink file called #<FILENAME>.
 
 __Inputs__: A filename, either of an already existing Simulink file in the current 
 directory, or the name of a new Simulink file (if that filename is not already being 
@@ -98,7 +99,7 @@ used in the current directory).
 
 __Outputs__: N/a
 
-### run_simulink_plc.m;
+### run_simulink_plc.m
 ```
 >> <OUT> = run_simulink_plc(<FILENAME>);
 ```
