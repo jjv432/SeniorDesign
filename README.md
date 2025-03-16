@@ -66,7 +66,7 @@ useful as it allows us to use Arduino packages such as _LiquidCrystalI2c_.
 
 ### MATLAB: Simulations
 
-The MATLAB simulations are used to provide students an oppurtunity to learn ladder logic without being being concerned about using or damaging hardware. A number of 
+The MATLAB simulations are used to provide students an oppurtunity to learn ladder logic without being concerned about using or damaging hardware. A number of 
 objects and functions have been included to make the simulation as straight-forward as possible.
 
 For Lab 1, only the simulation tools will be used. For Labs 2 and 3, students may choose to use the simulation to debug their logic, but it is not required.
@@ -78,6 +78,8 @@ Examples are provided for Ladder Logic diagrams that can be used as Solutions to
 
 INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
+>[!WARNING] The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC 
+> _must_ be connected to 12-24V at it's power input terminals.
 
 ## MATLAB Functions
 
