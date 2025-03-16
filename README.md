@@ -107,7 +107,7 @@ __Outputs__: N/a
  __Overview__: This function helps in running a simulink PLC simulation by: running 
 the _plcloadtypes_ command which is necessary for the Ladder Logic to execute; opens 
 the Simulink PLC Ladder Library, which contains all of the PLC Simulink blocks; and 
-runs a Simulink file called \<FILENAME>\. If \<FILENAME>\ does not exist in the 
+runs a Simulink file called \<FILENAME\>. If \<FILENAME\> does not exist in the 
 currently directory, the user will be prompted to edit the file, similar to *edit_simulink_plc*.
 
 __Inputs__: A filename, either of an already existing Simulink file in the current 
@@ -124,7 +124,6 @@ using Simulink. These objects provide a way to animate the outputs of the Simuli
 file.
 
 >[!NOTE]
-
 >For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. _Properties_ are 
 >characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and properties are accesses via dot notation.
 
@@ -140,10 +139,12 @@ A box object can be created as follows:
 ```
 >> <Example_Box> = box(<HEIGHT>, <WIDTH>, <Initial_X_Position>, <Initial_Y_Position>);
 ```
-
  __Methods__:
 
  __Properties__:
+
+_Box_ objects have these properties: *Height*, *Width*, *X_Coordinates* (of the corners of the box), *Y_Coordinates* (of the corners of the box), *X_Position* (of the \***\ 
+of the box), *Y_Position* (of the \***\ of the box), and *figure* (the handle to a MATLAB fig of the box).
 
 ### LED.m
  __Overview__:
