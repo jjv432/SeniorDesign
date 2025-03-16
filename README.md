@@ -74,20 +74,21 @@ For Lab 1, only the simulation tools will be used. For Labs 2 and 3, students ma
 
 ### Open PLC Coding
 
-Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 2 and 3.
+OpenPLC is the IDE that will be used to program the PLCs. Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 2 and 3.
 
+## Programming with OpenPLC
 Follow these steps to begin programming with Open PLC, as well as reviewing the [Open PLC Manual.](https://autonomylogic.com/docs/openplc-overview/)
 
-#### 1. Start Open PLC
+### 1. Start Open PLC
 
-#### 2. Create a new file
+### 2. Create a new file
 At the top right of the IDE, select the "New" button, denoted by a sheet with a green + sign. This will prompt you to select a folder that you want the project to 
 exist in. Create the folder, then click 'Select Folder.' 
 
 Once you've done this, a pop-up window will appear titled 'Create a new POU.' Name the program whatever you'd like, then select the language you'd like the program 
 to be in (IL: Instruction List, ST: Structured Text, __LD__: Ladder Diagram, FBD: Function Block Diagram, or SFC: Sequential Function Chart). Select LD, then click 'OK.'
 
-#### 3. Add symbols to the Ladder Diagram
+### 3. Add symbols to the Ladder Diagram
 In the file tree on the right of the window, double click on the program that you just created. You should see a dot matrix in the middle of the screen. This is 
 where you can begin you ladder diagram.
 
@@ -101,15 +102,15 @@ place the input symbol. Use the 'Normal' modifier, and call the variable 'my_inp
 
 Now, add an output to the diagram using the output symbol, the two curved lines with the word 'var' above it. Call this 'my_output'.
 
-#### 5. Define your variables
+### 5. Define your variables
 In the same window, above the dot matrix, there is a table. This is where we must define the variables that we just referenced in the diagram. To do this, click the 
 green plus at the top of the window. Adjust the name, leave class as 'local', change the type to BOOL (Type > Base Types > Bool), and set the initial value to 0.
 
-#### 6. 'Wire' the diagram
+### 6. 'Wire' the diagram
 To connect the symbols, click and drag between the terminals that you want to connect. For this example connect the Left PowerRail to the input, the input to the 
 output, then the output to the Right PowerRail. 
 
-#### 7. Test the program 
+### 7. Test the program 
 OpenPLC allows you to simulate your system. To do this, click the symbol at the top of the screen that looks like a blue person running. This will compile and begin 
 a simulation of your system. You will know the simulation is running when the blue-runner symbol is replaced by a stop sign.
 
@@ -120,7 +121,7 @@ Now, we can force values to be true of false. Right click the center of the 'my\
 highlighted green, signifying that it is on. To set the input back to its normal behavior, right click the symbol and select 'Release Value'.
 
 
-#### 8. Upload the progam
+### 8. Upload the progam
 
 At this point, you should see something that looks like this: 
 
