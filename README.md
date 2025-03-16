@@ -119,7 +119,9 @@ instance. You should now be able to see that wires that are energized are highli
 Now, we can force values to be true of false. Right click the center of the 'my\_\input' symbol, and select 'Force True.' You should now see that 'my\_\output' is 
 highlighted green, signifying that it is on. To set the input back to its normal behavior, right click the symbol and select 'Release Value'.
 
+#### 8. Upload the progam
 
+ADJUST IO TO SHOW HOW TO USE THE USER BUTTON, ADDRESSES, AND LEDs
 
 INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 
