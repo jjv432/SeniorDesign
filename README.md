@@ -141,10 +141,31 @@ A box object can be created as follows:
 ```
  __Methods__:
 
- __Properties__:
+Assuming we have a _Box_ object called _b_:
 
-_Box_ objects have these properties: *Height*, *Width*, *X_Coordinates* (of the corners of the box), *Y_Coordinates* (of the corners of the box), *X_Position* (of the \***\ 
-of the box), *Y_Position* (of the \***\ of the box), and *figure* (the handle to a MATLAB fig of the box).
+```
+>> b.draw_box(); 
+```
+Generates the _figure_ property and plots it.
+
+```
+>> b.move_box(<dt>, <velocity_x>, <velocity_y>);
+```
+
+Updates the position of a box moving at *velocity_x* and *velocity_y* after *dt* seconds. The previous *figure* property is deleted and replaced by the updated 
+ version, then plotted. This method lends itself to use within a for-loop to achieve smooth animations.
+
+```
+>> b.push_box(<direction>, <dt>);
+```
+
+Creates an animation of the box being pushed off the conveyor belt, then falling down. _dt_ is the change in time between updating the box position, and direction 
+ is if the box gets pushed forward (1) or backward (-1).
+
+__Properties__:
+
+_Box_ objects have these properties: *Height*, *Width*, *X_Coordinates* (of the corners of the box), *Y_Coordinates* (of the corners of the box), *X_Position* (of 
+the XXXX of the box), *Y_Position* (of the XXXX of the box), and *figure* (the handle to a MATLAB fig of the box).
 
 ### LED.m
  __Overview__:
