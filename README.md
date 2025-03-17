@@ -266,6 +266,8 @@ Lab 3: Competition between user and PLC for pushing boxes off of the conveyor be
 [Arduino OPTA User Manual](https://docs.arduino.cc/tutorials/opta/user-manual/)
 
 [Arduino OPTA Memory Addresses](https://autonomylogic.com/docs/2-4-physical-addressing/)
+
+[Getting Started with OPTA](https://opta.findernet.com/en/tutorial/getting-started)
 ## Troubleshooting
 
 __Error:__
