@@ -1,0 +1,3 @@
+# Resources
+
+This folder contains multiple resources to be used by the Faculty for these labs. This includes lab manuals,...
