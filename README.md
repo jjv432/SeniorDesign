@@ -51,19 +51,17 @@ objects and functions have been included to make the simulation as straight-forw
 For Lab 1, only the simulation tools will be used. For Labs 2 and 3, students may choose to use the simulation to debug their logic, but it is not required.
 
 
+There are a number of useful functions provided to make the process of 
+learning ladder logic smoother. All of these exist in [this](MATLAB/MATLAB_Functions) folder.
+
+See the [Matlab Functions Readme](MATLAB/README.md) to understand the functions that have been provided for using Simulink.
+
+
 ### Open PLC Coding
 
 Review the [Open PLC Readme](OpenPLCFolders/README.md) to get started with OpenPLC.
 
 OpenPLC is the IDE that will be used to program the PLCs. Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 2 and 3.
-
-
-## MATLAB Functions
-
-There are a number of useful functions provided to make the process of 
-learning ladder logic smoother. All of these exist in [this](MATLAB/MATLAB_Functions) folder.
-
-See the [Matlab Functions Readme](MATLAB/README.md) to understand the functions that have been provided for using Simulink.
 
 
 ## Lab Setups
@@ -86,6 +84,7 @@ Lab 3: Competition between user and PLC for pushing boxes off of the conveyor be
 [Arduino OPTA Memory Addresses](https://autonomylogic.com/docs/2-4-physical-addressing/)
 
 [Getting Started with OPTA](https://opta.findernet.com/en/tutorial/getting-started)
+
 ## Troubleshooting
 
 __Error:__
