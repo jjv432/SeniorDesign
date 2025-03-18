@@ -6,21 +6,19 @@ are a number of learning tools, including MATLAB simulation tools, instructions 
 
 
 ## Table of Contents
-- [Arduino OPTA PLC](#arduino-opta-plc)
-  * [Table of Contents](#table-of-contents)
-  * [Background](#background)
-  * [Install](#install)
-    + [1. Download OpenPLC](#1-download-openplc)
-    + [2. Download MATLAB](#2-download-matlab)
-      - [2.a. Packages](#2a-packages)
-    + [3. Download Arduino IDE](#3-download-arduino-ide)
-  * [Usage](#usage)
-    + [MATLAB: Simulations](#matlab--simulations)
-    + [Open PLC Coding](#open-plc-coding)
-  * [Lab Setups](#lab-setups)
-  * [Helpful Links](#helpful-links)
-  * [Troubleshooting](#troubleshooting)
-  * [License](#license)
+- [Background](#background)
+- [Install](#install)
+  * [1. Download OpenPLC](#1-download-openplc)
+  * [2. Download MATLAB](#2-download-matlab)
+    + [2.a. Packages](#2a-packages)
+  * [3. Download Arduino IDE](#3-download-arduino-ide)
+- [Usage](#usage)
+  * [MATLAB: Simulations](#matlab--simulations)
+  * [Open PLC Coding](#open-plc-coding)
+- [Lab Setups](#lab-setups)
+- [Helpful Links](#helpful-links)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
