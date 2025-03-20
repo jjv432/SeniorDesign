@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6.xsd">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-18T15:13:50"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-18T15:13:50">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-20T15:35:20">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -16,12 +16,62 @@
   </contentHeader>
   <types>
     <dataTypes/>
-    <pous/>
+    <pous>
+      <pou name="program0" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="Out" address="%QX0.8">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <LD>
+            <leftPowerRail localId="1" width="10" height="40">
+              <position x="130" y="60"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="10" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <rightPowerRail localId="2" width="10" height="40">
+              <position x="300" y="60"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="3">
+                  <position x="300" y="80"/>
+                  <position x="220" y="80"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <coil localId="3" negated="false" width="21" height="20">
+              <position x="200" y="70"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="1">
+                  <position x="200" y="80"/>
+                  <position x="140" y="80"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Out</variable>
+            </coil>
+          </LD>
+        </body>
+      </pou>
+    </pous>
   </types>
   <instances>
     <configurations>
       <configuration name="Config0">
-        <resource name="Res0"/>
+        <resource name="Res0">
+          <task name="task0" priority="0" interval="T#20ms">
+            <pouInstance name="instance0" typeName="program0"/>
+          </task>
+        </resource>
       </configuration>
     </configurations>
   </instances>
