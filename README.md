@@ -48,7 +48,7 @@ You will need to download the [Simulink PLC Coder](https://www.mathworks.com/hel
 
 ### 3. Download Arduino IDE
 
-You will need to download the Arduino IDE in order to [partition the memory](https://autonomylogic.com/docs/2-4-physical-addressing/). Follow the steps at the 
+You will need to download the Arduino IDE in order to [partition the memory](https://docs.arduino.cc/tutorials/opta/memory-partitioning/). Follow the steps at the 
 provided link to partition the memory on the PLC, a step that is necessary to allow Arduino sketches and Ladder Logic sketches to exist simultaneously. This is 
 useful as it allows us to use Arduino packages such as _LiquidCrystalI2c_.
 
