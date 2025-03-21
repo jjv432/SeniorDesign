@@ -96,6 +96,8 @@ Lab 3: Competition between user and PLC for pushing boxes off of the conveyor be
 
 [Getting Started with OPTA](https://opta.findernet.com/en/tutorial/getting-started)
 
+[Opta Digital Expansion Documentation](https://docs.arduino.cc/tutorials/opta/user-manual/#opta-digital-expansions)
+
 ## Troubleshooting
 
 __Error:__
