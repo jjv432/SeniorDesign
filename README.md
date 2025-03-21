@@ -4,24 +4,6 @@ This repository was developed to satisfy the requirements of the Mechanical Engi
 Team 519 was tasked with developing curriculum for the Introduction to Mechatronics course to enable students to learn how to use PLCs. In this repository, there 
 are a number of learning tools, including MATLAB simulation tools, instructions on using OpenPLC, wiring diagrams, and lab designs and solutions.
 
-
-## Table of Contents
-- [Background](#background)
-- [Install](#install)
-  * [1. Download OpenPLC](#1-download-openplc)
-  * [2. Download MATLAB](#2-download-matlab)
-    + [2.a. Packages](#2a-packages)
-  * [3. Download Arduino IDE](#3-download-arduino-ide)
-- [Usage](#usage)
-  * [MATLAB: Simulations](#matlab--simulations)
-  * [Open PLC Coding](#open-plc-coding)
-- [Lab Setups](#lab-setups)
-- [Helpful Links](#helpful-links)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 ## Background
 
 PLC's were developed to replace physical relays. Previously, rewiring relays was a time consuming process that led to waste as boards would frequently be thrown 
