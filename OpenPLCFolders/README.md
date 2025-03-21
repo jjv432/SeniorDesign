@@ -40,7 +40,7 @@ output, then the output to the Right PowerRail.
 OpenPLC allows you to simulate your system. To do this, click the symbol at the top of the screen that looks like a blue person running. This will compile and begin 
 a simulation of your system. You will know the simulation is running when the blue-runner symbol is replaced by a stop sign.
 
-On the right-hand-side of the screen, click the sunglasses next to the drop-down window named something like: "Config0.Res0.instance0". This will begin a debugging 
+On the left-hand-side of the screen, click the sunglasses next to the drop-down window named something like: "Config0.Res0.instance0". This will begin a debugging 
 instance. You should now be able to see that wires that are energized are highlighted green.
 
 Now, we can force values to be true of false. Right click the center of the 'my\_\input' symbol, and select 'Force True.' You should now see that 'my\_\output' is 
