@@ -61,3 +61,7 @@ INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
 > connected to 12-24V at it's power input terminals.
 
+## Using Arduino Sketches with OpenPLC
+
+## Using an Expansion Module with OpenPLC and Arduino IDE
+
