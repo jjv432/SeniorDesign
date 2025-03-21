@@ -2,7 +2,7 @@
 
 OpenPLC is the IDE that will be used to program the PLCs. Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 2 and 3.
 
-## Programming with OpenPLC
+## Getting Started with OpenPLC
 Follow these steps to begin programming with Open PLC, as well as reviewing the [Open PLC Manual.](https://autonomylogic.com/docs/openplc-overview/)
 
 ### 1. Start Open PLC
