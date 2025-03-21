@@ -62,10 +62,10 @@ objects and functions have been included to make the simulation as straight-forw
 For Lab 1, only the simulation tools will be used. For Labs 2 and 3, students may choose to use the simulation to debug their logic, but it is not required.
 
 
-There are a number of useful functions provided to make the process of 
+There are a number of useful functions and objects provided to make the process of 
 learning ladder logic smoother. All of these exist in [this](MATLAB/MATLAB_Functions) folder.
 
-See the [Matlab Functions Readme](MATLAB/README.md) to understand the functions that have been provided for using Simulink.
+See the [Matlab Functions Readme](MATLAB/MATLAB_Functions/README.md) to understand the functions that have been provided for using Simulink.
 
 
 ### Open PLC Coding
