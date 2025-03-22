@@ -31,30 +31,31 @@ PROGRAM main
     St5 : BOOL;
   END_VAR
   VAR
-    BoxBut AT %IX0.1 : BOOL := 0;
-    StartBut AT %IX0.0 : BOOL := 0;
+    BoxBut : BOOL := 0;
+    StartBut : BOOL := 0;
   END_VAR
   VAR
     TimeDN : BOOL := 0;
     Time2DN : BOOL := 0;
   END_VAR
   VAR
-    BreakBeam AT %IX0.2 : BOOL := 0;
-    BreakBeam2 AT %IX0.3 : BOOL := 0;
-    StopBut AT %IX0.4 : BOOL := 0;
-    Motor AT %QX0.1 : BOOL := 0;
+    BreakBeam : BOOL := 0;
+    BreakBeam2 : BOOL := 0;
+    StopBut : BOOL := 0;
+    Motor : BOOL := 0;
   END_VAR
   VAR
     TON0 : TON;
   END_VAR
   VAR
-    LinearAct AT %QX0.2 : BOOL := 0;
+    LinearAct : BOOL := 0;
   END_VAR
   VAR_EXTERNAL
     Count_Value : INT;
   END_VAR
   VAR
     CounterDN : BOOL;
+    STOP : BOOL;
     CTU0 : CTU;
     TON1 : TON;
     R_TRIG1 : R_TRIG;
@@ -71,12 +72,13 @@ PROGRAM main
   Count_Value := CTU0.CV;
   TON1(IN := St5, PT := T#1000ms);
   Time2DN := TON1.Q;
-  St2 := NOT(St3) AND (St2 OR BoxBut AND St1);
-  St3 := NOT(St4) AND (St3 OR BreakBeam AND St2);
-  St4 := NOT(St5) AND (St4 OR TimeDN AND St3);
-  St5 := NOT(St1) AND (St5 OR BreakBeam2 AND St4);
-  St1 := NOT(St2) AND (St1 OR StartBut AND St0 OR Time2DN AND St5);
   CounterDN := CTU0.Q;
+  STOP := CounterDN OR StopBut;
+  St1 := NOT(STOP) AND NOT(St2) AND (St1 OR StartBut AND St0 OR Time2DN AND St5);
+  St2 := NOT(STOP) AND NOT(St3) AND (St2 OR BoxBut AND St1);
+  St3 := NOT(STOP) AND NOT(St4) AND (St3 OR BreakBeam AND St2);
+  St4 := NOT(STOP) AND NOT(St5) AND (St4 OR TimeDN AND St3);
+  St5 := NOT(STOP) AND NOT(St1) AND (St5 OR BreakBeam2 AND St4);
 END_PROGRAM
 
 
