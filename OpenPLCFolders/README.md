@@ -129,6 +129,6 @@ Following the image below, write code to write the value of 'my_output' to the L
 
 You can now upload the sketch as normal. 
 >[!WARNING]
->Sometimes, compilation errors in the script may cause it to be deleted when uploading the program. To avoid this, try starting a PLC simulation first to catch any errors. 
+>Sometimes, compilation errors in the script may cause it to be deleted when uploading the program. To avoid this, try [starting a PLC simulation](#7-test-the-program) first to catch any errors. 
 
 
