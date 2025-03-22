@@ -55,7 +55,7 @@ Review the [Open PLC Readme](OpenPLCFolders/README.md) to get started with OpenP
 
 OpenPLC is the IDE that will be used to program the PLCs. Examples are provided for Ladder Logic diagrams that can be used as Solutions to Labs 2 and 3.
 
-Help with [Expansion Modules](OpenPLCFolders/README.md#using-an-expansion-module-with-openplc-and-arduino-ide)
+Help with [Expansion Modules](ArduinoIDEFolders/README.md#using-an-expansion-module-with-openplc-and-arduino-ide)
 
 ## Lab Setups
 
