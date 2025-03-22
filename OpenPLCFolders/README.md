@@ -163,5 +163,3 @@ There are a number of othe examples in this library that provide for IO. Look th
 
 Also, you can get an introduction to all IO at once using our [Expansion Module GPIO Sketch](). This sketch shows a simple GPIO example and is referrenced off of 
 the Arduino example sketches.
-
-To get started quickly with expansion modules, look through some of the example sketches that Arduino provides. 
