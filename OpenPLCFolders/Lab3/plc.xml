@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-11T14:10:47"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-22T14:39:17">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-22T15:25:12">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -138,14 +138,18 @@
               </initialValue>
             </variable>
           </localVars>
-          <localVars>
+          <externalVars>
             <variable name="Count_Value">
               <type>
                 <INT/>
               </type>
-              <initialValue>
-                <simpleValue value="0"/>
-              </initialValue>
+            </variable>
+          </externalVars>
+          <localVars>
+            <variable name="CounterDN">
+              <type>
+                <BOOL/>
+              </type>
             </variable>
             <variable name="CTU0">
               <type>
@@ -240,13 +244,13 @@
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="100"/>
-                <connection refLocalId="7">
-                  <position x="600" y="160"/>
-                  <position x="541" y="160"/>
-                </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="140"/>
+                <connection refLocalId="7">
+                  <position x="600" y="200"/>
+                  <position x="551" y="200"/>
+                </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="180"/>
@@ -397,7 +401,13 @@
                   <position x="530" y="70"/>
                   <position x="508" y="70"/>
                   <position x="508" y="120"/>
-                  <position x="391" y="120"/>
+                  <position x="341" y="120"/>
+                </connection>
+                <connection refLocalId="68">
+                  <position x="530" y="70"/>
+                  <position x="510" y="70"/>
+                  <position x="510" y="160"/>
+                  <position x="410" y="160"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
@@ -524,9 +534,9 @@
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="500"/>
-                <connection refLocalId="58" formalParameter="Q">
+                <connection refLocalId="67">
                   <position x="1030" y="560"/>
-                  <position x="920" y="560"/>
+                  <position x="980" y="560"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
@@ -542,7 +552,7 @@
                 <relPosition x="0" y="660"/>
                 <connection refLocalId="63">
                   <position x="1030" y="720"/>
-                  <position x="960" y="720"/>
+                  <position x="961" y="720"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
@@ -779,11 +789,11 @@
               <variable>TimeDN</variable>
             </coil>
             <contact localId="54" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="370" y="110"/>
+              <position x="320" y="110"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="370" y="120"/>
+                  <position x="320" y="120"/>
                   <position x="200" y="120"/>
                 </connection>
               </connectionPointIn>
@@ -791,74 +801,6 @@
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>StopBut</variable>
-            </contact>
-            <coil localId="7" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="520" y="150"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="6">
-                  <position x="520" y="160"/>
-                  <position x="431" y="160"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>St1</variable>
-            </coil>
-            <contact localId="6" negated="true" width="21" height="20" executionOrderId="0">
-              <position x="410" y="150"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="4">
-                  <position x="410" y="160"/>
-                  <position x="341" y="160"/>
-                </connection>
-                <connection refLocalId="64">
-                  <position x="410" y="160"/>
-                  <position x="380" y="160"/>
-                  <position x="380" y="200"/>
-                  <position x="321" y="200"/>
-                </connection>
-                <connection refLocalId="66">
-                  <position x="410" y="160"/>
-                  <position x="380" y="160"/>
-                  <position x="380" y="240"/>
-                  <position x="281" y="240"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>St2</variable>
-            </contact>
-            <contact localId="4" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="320" y="150"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="3">
-                  <position x="320" y="160"/>
-                  <position x="271" y="160"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>StartBut</variable>
-            </contact>
-            <contact localId="3" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="250" y="150"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="1">
-                  <position x="250" y="160"/>
-                  <position x="200" y="160"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>St0</variable>
             </contact>
             <contact localId="55" negated="false" width="21" height="20">
               <position x="730" y="470"/>
@@ -1060,48 +1002,6 @@
               </connectionPointOut>
               <variable>Time2DN</variable>
             </coil>
-            <contact localId="64" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="300" y="190"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="65">
-                  <position x="300" y="200"/>
-                  <position x="251" y="200"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Time2DN</variable>
-            </contact>
-            <contact localId="65" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="230" y="190"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="1">
-                  <position x="230" y="200"/>
-                  <position x="200" y="200"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>St5</variable>
-            </contact>
-            <contact localId="66" negated="false" width="21" height="20" executionOrderId="0">
-              <position x="260" y="230"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="1">
-                  <position x="260" y="240"/>
-                  <position x="200" y="240"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>St1</variable>
-            </contact>
             <coil localId="12" negated="false" width="21" height="20" executionOrderId="0">
               <position x="520" y="310"/>
               <connectionPointIn>
@@ -1405,6 +1305,144 @@
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>St5</variable>
+            </contact>
+            <contact localId="67" negated="false" width="21" height="20">
+              <position x="960" y="550"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="58" formalParameter="Q">
+                  <position x="960" y="560"/>
+                  <position x="920" y="560"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>CounterDN</variable>
+            </contact>
+            <coil localId="7" negated="false" width="21" height="20" executionOrderId="0">
+              <position x="530" y="190"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="6">
+                  <position x="530" y="200"/>
+                  <position x="441" y="200"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>St1</variable>
+            </coil>
+            <contact localId="6" negated="true" width="21" height="20" executionOrderId="0">
+              <position x="420" y="190"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="4">
+                  <position x="420" y="200"/>
+                  <position x="351" y="200"/>
+                </connection>
+                <connection refLocalId="64">
+                  <position x="420" y="200"/>
+                  <position x="390" y="200"/>
+                  <position x="390" y="240"/>
+                  <position x="331" y="240"/>
+                </connection>
+                <connection refLocalId="66">
+                  <position x="420" y="200"/>
+                  <position x="390" y="200"/>
+                  <position x="390" y="280"/>
+                  <position x="291" y="280"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>St2</variable>
+            </contact>
+            <contact localId="4" negated="false" width="21" height="20" executionOrderId="0">
+              <position x="330" y="190"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="3">
+                  <position x="330" y="200"/>
+                  <position x="281" y="200"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>StartBut</variable>
+            </contact>
+            <contact localId="3" negated="false" width="21" height="20" executionOrderId="0">
+              <position x="260" y="190"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="1">
+                  <position x="260" y="200"/>
+                  <position x="200" y="200"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>St0</variable>
+            </contact>
+            <contact localId="64" negated="false" width="21" height="20" executionOrderId="0">
+              <position x="310" y="230"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="65">
+                  <position x="310" y="240"/>
+                  <position x="261" y="240"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Time2DN</variable>
+            </contact>
+            <contact localId="65" negated="false" width="21" height="20" executionOrderId="0">
+              <position x="240" y="230"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="1">
+                  <position x="240" y="240"/>
+                  <position x="200" y="240"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>St5</variable>
+            </contact>
+            <contact localId="66" negated="false" width="21" height="20" executionOrderId="0">
+              <position x="270" y="270"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="1">
+                  <position x="270" y="280"/>
+                  <position x="200" y="280"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>St1</variable>
+            </contact>
+            <contact localId="68" negated="false" width="20" height="20">
+              <position x="390" y="150"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="1">
+                  <position x="390" y="160"/>
+                  <position x="200" y="160"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>CounterDN</variable>
             </contact>
           </LD>
         </body>

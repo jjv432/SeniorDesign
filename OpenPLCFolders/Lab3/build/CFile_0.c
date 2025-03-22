@@ -18,15 +18,162 @@ extern "C" __IEC_BOOL_t CONFIG0__ST4;
 #define St4 CONFIG0__ST4.value
 extern "C" __IEC_BOOL_t CONFIG0__ST5;
 #define St5 CONFIG0__ST5.value
+extern "C" __IEC_INT_t CONFIG0__COUNT_VALUE;
+#define Count_Value CONFIG0__COUNT_VALUE.value
 
 /* User sketch */
-void sketch_setup()
-{
+#include <LiquidCrystal_I2C.h>
+
+
+
+int state_buffer = 0;
+
+int state = 0;
+
+int last_state = -1;
+
+
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+
+
+void sketch_setup() {
+
+
+
+  lcd.init();
+
+
+
+  lcd.backlight();
+
+
+
+lcd.setCursor(0, 0);
+
+
+
+lcd.print("In State:");
 
 }
 
-void sketch_loop()
-{
+
+
+void sketch_loop() {
+
+
+
+state_buffer = St0 + St1*(1<<1) + St2*(1<<2) + St3*(1<<3) + St4*(1<<4) + St5*(1<<5);
+
+
+
+switch(state_buffer){
+
+
+
+case 0b1:
+
+
+
+    //lcd.print("0");
+
+state = 0;
+
+
+
+    break;
+
+
+
+case 0b10:
+
+
+
+    //lcd.print("1");
+
+state = 1;
+
+
+
+    break;
+
+
+
+case 0b100:
+
+
+
+    //lcd.print("2");
+
+state = 2;
+
+
+
+    break;
+
+
+
+case 0b1000:
+
+
+state = 3;
+
+
+
+    break;
+
+
+
+case 0b10000:
+
+
+
+    //lcd.print("4");
+
+state = 4;
+
+
+
+    break;
+
+
+
+case 0b100000:
+
+
+
+    //lcd.print("5");
+
+state = 5;
+
+
+
+    break;
+
+
+
+}
+
+
+
+if (state != last_state){
+
+lcd.setCursor(11,0);
+
+lcd.print(" ");
+
+lcd.setCursor(11,0);
+
+lcd.print(state);
+
+}
+
+lcd.setCursor(0,1);
+lcd.print(Count_Value);
+
+
+last_state = state;
 
 }
 #endif
