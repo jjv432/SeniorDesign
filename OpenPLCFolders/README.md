@@ -58,6 +58,15 @@ variable. For this example, we'll use the user button and the first relay as \'m
 In this case, these addresses correspond to: 
 
 For a full list of memory addresses, see [this page of the OpenPLC manual](https://autonomylogic.com/docs/2-4-physical-addressing/).
+
+Also, reference the following two images from the Arduino PLC IDE for the addresses of the user button and the LEDs.
+
+![image](https://github.com/user-attachments/assets/e4055240-5ba1-4b2c-ac85-572262143c9d)
+
+![image](https://github.com/user-attachments/assets/124bd6ee-8584-416b-abb7-e758179cc9da)
+
+
+
 ### 9. Upload the progam
 >[!WARNING]
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
