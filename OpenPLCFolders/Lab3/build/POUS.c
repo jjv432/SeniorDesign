@@ -100,6 +100,7 @@ void MAIN_body__(MAIN *data__) {
   __SET_EXTERNAL(data__->,ST4,,(!(__GET_EXTERNAL(data__->ST5,)) && (__GET_EXTERNAL(data__->ST4,) || (__GET_VAR(data__->TIMEDN,) && __GET_EXTERNAL(data__->ST3,)))));
   __SET_EXTERNAL(data__->,ST5,,(!(__GET_EXTERNAL(data__->ST1,)) && (__GET_EXTERNAL(data__->ST5,) || (__GET_LOCATED(data__->BREAKBEAM2,) && __GET_EXTERNAL(data__->ST4,)))));
   __SET_EXTERNAL(data__->,ST1,,(!(__GET_EXTERNAL(data__->ST2,)) && ((__GET_EXTERNAL(data__->ST1,) || (__GET_LOCATED(data__->STARTBUT,) && __GET_EXTERNAL(data__->ST0,))) || (__GET_VAR(data__->TIME2DN,) && __GET_EXTERNAL(data__->ST5,)))));
+  __SET_VAR(data__->,COUNTERDN,,__GET_VAR(data__->CTU0.Q,));
 
   goto __end;
 

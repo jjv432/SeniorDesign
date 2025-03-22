@@ -53,6 +53,7 @@ PROGRAM main
   St4 := NOT(St5) AND (St4 OR TimeDN AND St3);
   St5 := NOT(St1) AND (St5 OR BreakBeam2 AND St4);
   St1 := NOT(St2) AND (St1 OR StartBut AND St0 OR Time2DN AND St5);
+  CounterDN := CTU0.Q;
 END_PROGRAM
 
 

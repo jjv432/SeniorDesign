@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-11T14:10:47"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-03-22T15:25:12">
+  <contentHeader name="Unnamed" modificationDateTime="2025-03-22T15:30:25">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -534,9 +534,9 @@
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="500"/>
-                <connection refLocalId="67">
+                <connection refLocalId="69">
                   <position x="1030" y="560"/>
-                  <position x="980" y="560"/>
+                  <position x="990" y="560"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
@@ -1306,20 +1306,6 @@
               </connectionPointOut>
               <variable>St5</variable>
             </contact>
-            <contact localId="67" negated="false" width="21" height="20">
-              <position x="960" y="550"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="58" formalParameter="Q">
-                  <position x="960" y="560"/>
-                  <position x="920" y="560"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>CounterDN</variable>
-            </contact>
             <coil localId="7" negated="false" width="21" height="20" executionOrderId="0">
               <position x="530" y="190"/>
               <connectionPointIn>
@@ -1430,7 +1416,7 @@
               </connectionPointOut>
               <variable>St1</variable>
             </contact>
-            <contact localId="68" negated="false" width="20" height="20">
+            <contact localId="68" negated="false" width="21" height="20">
               <position x="390" y="150"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
@@ -1440,10 +1426,24 @@
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>CounterDN</variable>
             </contact>
+            <coil localId="69" negated="false" width="21" height="20">
+              <position x="970" y="550"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="58" formalParameter="Q">
+                  <position x="970" y="560"/>
+                  <position x="920" y="560"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>CounterDN</variable>
+            </coil>
           </LD>
         </body>
       </pou>
