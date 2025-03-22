@@ -52,6 +52,12 @@ At this point, you should see something that looks like this:
 
 ### 8. Set IO addresses
 
+To associate variables with the OPTA's IO, you must assign a memory address to the variable. To do this, you will need to adjust the "Location" column of the 
+variable. For this example, we'll use the user button and the first relay as \'my_input' and 'my_output'\, respectively.
+
+In this case, these addresses correspond to: 
+
+For a full list of memory addresses, see [this page of the OpenPLC manual](https://autonomylogic.com/docs/2-4-physical-addressing/).
 ### 9. Upload the progam
 >[!WARNING]
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
@@ -89,7 +95,7 @@ Make sure that the "Type" and name are correct, and that any initial values are 
 ### 4. Program the sketch
 
 Now, you can begin programming in the sketch just like any other Arduino. You can access any public library that any other Arduino may be able to access. In this 
-case, we will be using the **Liquid_CrystalI2C** to write to the LCD.
+case, we will be using the **LiquidCrystal_I2C** to write to the LCD.
 
 Following the image below, write code to write the value of 'my_output' to the LCD.
 
