@@ -8,6 +8,8 @@ developed a library to give users examples and functions to perform this communi
 
 The expansion module locks onto the Opta easily. Ensure that the AUX connections are made properly, doing so slowly to avoid damaging the board.
 
+>[!WARNING]
+>The expansion module __MUST__ be receiving power throught its power terminals to work. It will not be powered via the AUX connection to the Opta
 
 ### 2. Update the firmware
 
