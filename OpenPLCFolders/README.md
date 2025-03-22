@@ -76,7 +76,7 @@ For the final step, upload the program to the PLC. To do this, connect to the PL
 OpenPLC program, click the icon that looks like a red circle with a CPU inside of it. This will compile your code and return any compilation 
 errors.
 
-Next, select the board type (Arduino Opta) and the COM Port (likely the largest Serial Port listed. These are labeled with COM).
+Next, in the window that pops up, select the board type (Arduino Opta) and the COM Port (likely the largest Serial Port listed. These are labeled with COM).
 
 Finally, click "Transfer to PLC". You should now be able to start interacting with the PLC using GPIO methods.
 >[!WARNING]
