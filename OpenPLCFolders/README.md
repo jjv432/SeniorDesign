@@ -67,10 +67,18 @@ In this case, these addresses correspond to: %IX1.0 and %QX0.0, respectively.
 Update the locations of each variable.
 
 >[!NOTE]
->To better understand the address syntax, see [here](https://autonomylogic.com/docs/2-3-input-output-and-memory-addressing/)
+>To better understand the address syntax, see [this page of the OpenPLC manual](https://autonomylogic.com/docs/2-3-input-output-and-memory-addressing/)
 
 
 ### 9. Upload the progam
+
+For the final step, upload the program to the PLC. To do this, connect to the PLC from your compute via the USB-C connector. Then, in the 
+OpenPLC program, click the icon that looks like a red circle with a CPU inside of it. This will compile your code and return any compilation 
+errors.
+
+Next, select the board type (Arduino Opta) and the COM Port (likely the largest Serial Port listed. These are labeled with COM).
+
+Finally, click "Transfer to PLC". You should now be able to start interacting with the PLC using GPIO methods.
 >[!WARNING]
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
 > connected to 12-24V at it's power input terminals.
