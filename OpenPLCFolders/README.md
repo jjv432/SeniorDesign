@@ -121,6 +121,11 @@ Following the image below, write code to write the value of 'my_output' to the L
 
 ![image](https://github.com/user-attachments/assets/00c17cd9-aa6e-4ef4-a63e-e61ddee1527e)
 
+### 5. Upload the sketch
+
+You can now upload the sketch as normal. 
+>[!WARNING]
+>Sometimes, compilation errors in the script may cause it to be deleted when uploading the program. To avoid this, try starting a PLC simulation first to catch any errors. 
 >[!NOTE]
 >Notice that the 'setup' and 'loop' functions are actually called \'sketch_setup' and 'sketch_loop'\. Make sure to catch this difference if uploading directly from an Arduino.
 ## Using an Expansion Module with OpenPLC and Arduino IDE
