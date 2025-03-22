@@ -30,3 +30,20 @@ There are a number of othe examples in this library that provide for IO. Look th
 
 Also, you can get an introduction to all IO at once using our [Expansion Module GPIO Sketch](ExpansionModuleGPIO/ExpansionModuleGPIO.ino). This sketch shows a simple GPIO example and is referrenced off of 
 the Arduino example sketches.
+
+## Troubleshooting
+
+The LED on the expansion module will have different behaviors for different states. The following list contains what some of the behaviors represent:
+
+> Solid Green
+The firmware is installed to the module
+
+> Solid Red
+Firmware must be installed to the module
+
+There are also a couple of error messages that may present themselves: 
+
+```
+Being used by another process
+```
+Close any other programs that may be connected to the PLC, likely an instance of OpenPLC.
