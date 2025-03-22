@@ -96,6 +96,6 @@ Following the image below, write code to write the value of 'my_output' to the L
 ![image](https://github.com/user-attachments/assets/00c17cd9-aa6e-4ef4-a63e-e61ddee1527e)
 
 >[!NOTE]
->Notice that the 'setup' and 'loop' functions are actually called 'sketch_\setup' and 'sketch_loop'\. Make sure to catch this difference if uploading directly from an Arduino.
+>Notice that the 'setup' and 'loop' functions are actually called \'sketch_setup' and 'sketch_loop'\. Make sure to catch this difference if uploading directly from an Arduino.
 ## Using an Expansion Module with OpenPLC and Arduino IDE
 
