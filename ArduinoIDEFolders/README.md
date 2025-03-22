@@ -46,6 +46,6 @@ Firmware must be installed to the module
 There are also a couple of error messages that may present themselves: 
 
 ```
-Being used by another process
+"...being used by another process"
 ```
 Close any other programs that may be connected to the PLC, likely an instance of OpenPLC.
