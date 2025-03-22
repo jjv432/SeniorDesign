@@ -57,7 +57,7 @@ variable. For this example, we'll use the user button and the first relay as \'m
 
 In this case, these addresses correspond to: 
 
-For a full list of memory addresses, see [this page of the OpenPLC manual](https://autonomylogic.com/docs/2-4-physical-addressing/).
+For a full list of digital IO memory addresses, see [this page of the OpenPLC manual](https://autonomylogic.com/docs/2-4-physical-addressing/).
 ### 9. Upload the progam
 >[!WARNING]
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
