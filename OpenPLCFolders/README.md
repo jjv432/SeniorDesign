@@ -46,22 +46,53 @@ instance. You should now be able to see that wires that are energized are highli
 Now, we can force values to be true of false. Right click the center of the 'my\_\input' symbol, and select 'Force True.' You should now see that 'my\_\output' is 
 highlighted green, signifying that it is on. To set the input back to its normal behavior, right click the symbol and select 'Release Value'.
 
-
-### 8. Upload the progam
-
 At this point, you should see something that looks like this: 
 
 <img width="959" alt="OpenPLC_Example" src="https://github.com/user-attachments/assets/771a0a71-793c-4f5d-ad99-97c2ae133df6" />
 
-ADJUST IO TO SHOW HOW TO USE THE USER BUTTON, ADDRESSES, AND LEDs
+### 8. Set IO addresses
 
-INSERT EXAMPLE LINKS ON CONNECTIONS AND PROGRAMMING
-
+### 9. Upload the progam
 >[!WARNING]
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
 > connected to 12-24V at it's power input terminals.
 
 ## Using Arduino Sketches with OpenPLC
+
+OpenPLC is capable with Arduino, which is great because most of the communication (that we've implemented) uses I2C, a communication protocol commonly used with 
+Arduinos. The following will be a continuation of the previous example, but allowing us to print to an LCD screen connected to the OPTA's AUX port.
+
+_Requires and I2C LCD and proper OPTA AUX connector_
+
+
+### 1. Make shared variables External
+
+Because the memory is partition in the OPTA, you must share the variables between the two cores. 
+
+To do this, change the "Class" of "my_output" to "External" instead of "Local".
+
+### 2. Create an Arduino Sketch
+
+Click on the whitespace in the "Project" tab on the left-hand-side of the window. Then, select "Arduino extension". Double click the new tab that was created to 
+access the Arduino Sketch.
+
+### 3. Access shared variables
+
+Once you've started editing the sketch, there will be a variable window at the top similar to the Ladder Logic editor. Click the green "+" to create a new variable, 
+then enter the name of the shared variable. In this case it will be "my_output".
+
+Make sure that the "Type" and name are correct, and that any initial values are set properly.
+
+>[!NOTE] Now that you've made these variables external, you will only be able to change their initial values from Arduino Sketch editor window.
+
+### 4. Program the sketch
+
+Now, you can begin programming in the sketch just like any other Arduino. You can access any public library that any other Arduino may be able to access. In this 
+case, we will be using the **Liquid_CrystalI2C** to write to the LCD.
+
+Following the image below, write code to write the value of 'my_output' to the LCD.
+
+
 
 ## Using an Expansion Module with OpenPLC and Arduino IDE
 
