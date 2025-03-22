@@ -36,9 +36,11 @@ the Arduino example sketches.
 The LED on the expansion module will have different behaviors for different states. The following list contains what some of the behaviors represent:
 
 > Solid Green
+
 The firmware is installed to the module
 
 > Solid Red
+
 Firmware must be installed to the module
 
 There are also a couple of error messages that may present themselves: 
