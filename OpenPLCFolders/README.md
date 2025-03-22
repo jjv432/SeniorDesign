@@ -83,7 +83,8 @@ then enter the name of the shared variable. In this case it will be "my_output".
 
 Make sure that the "Type" and name are correct, and that any initial values are set properly.
 
->[!NOTE] Now that you've made these variables external, you will only be able to change their initial values from Arduino Sketch editor window.
+>[!NOTE]
+>Now that you've made these variables external, you will only be able to change their initial values from Arduino Sketch editor window.
 
 ### 4. Program the sketch
 
@@ -92,6 +93,7 @@ case, we will be using the **Liquid_CrystalI2C** to write to the LCD.
 
 Following the image below, write code to write the value of 'my_output' to the LCD.
 
+![image](https://github.com/user-attachments/assets/00c17cd9-aa6e-4ef4-a63e-e61ddee1527e)
 
 
 ## Using an Expansion Module with OpenPLC and Arduino IDE
