@@ -9,6 +9,15 @@
     <variable name="St5" type="BOOL" initial="0"/>
   </variables>
   <sketch>
-    <xhtml:p><![CDATA[]]></xhtml:p>
+    <xhtml:p><![CDATA[
+void sketch_setup()
+{
+
+}
+
+void sketch_loop()
+{
+
+}]]></xhtml:p>
   </sketch>
 </CFile>
