@@ -55,9 +55,21 @@ At this point, you should see something that looks like this:
 To associate variables with the OPTA's IO, you must assign a memory address to the variable. To do this, you will need to adjust the "Location" column of the 
 variable. For this example, we'll use the user button and the first relay as \'my_input' and 'my_output'\, respectively.
 
-In this case, these addresses correspond to: 
-
 For a full list of digital IO memory addresses, see [this page of the OpenPLC manual](https://autonomylogic.com/docs/2-4-physical-addressing/).
+
+Also, reference the following two images from the Arduino PLC IDE for the addresses of the user button and the LEDs.
+
+![image](https://github.com/user-attachments/assets/e4055240-5ba1-4b2c-ac85-572262143c9d)
+
+![image](https://github.com/user-attachments/assets/124bd6ee-8584-416b-abb7-e758179cc9da)
+
+In this case, these addresses correspond to: %IX1.0 and %QX0.0, respectively.
+Update the locations of each variable.
+
+>[!NOTE]
+>To better understand the address syntax, see [here](https://autonomylogic.com/docs/2-3-input-output-and-memory-addressing/)
+
+
 ### 9. Upload the progam
 >[!WARNING]
 > The inputs and user button of the PLC will operate properly when only provided power via a USB-C cable. However, to use the relay outputs, the PLC _must_ be 
