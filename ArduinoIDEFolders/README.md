@@ -28,5 +28,5 @@ File > Examples > Arduino_Opta_Blueprint > getExpansions
 ### 4. Use other IO examples
 There are a number of othe examples in this library that provide for IO. Look through these to get a better understanding of how to program the modules.
 
-Also, you can get an introduction to all IO at once using our [Expansion Module GPIO Sketch](ExpansionModuleGPIO). This sketch shows a simple GPIO example and is referrenced off of 
+Also, you can get an introduction to all IO at once using our [Expansion Module GPIO Sketch](ExpansionModuleGPIO/ExpansionModuleGPIO.ino). This sketch shows a simple GPIO example and is referrenced off of 
 the Arduino example sketches.
