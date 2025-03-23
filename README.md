@@ -6,8 +6,14 @@ are a number of learning tools, including MATLAB simulation tools, instructions 
 
 ## Background
 
+A Programmable Logic Controller (PLC) is an industrial computer that is designed for automation processes, minimizing manual labor and increasing efficiency. These digital devices are used to monitor inputs, make programmed decisions through software applications, then control outputs. PLCs are rugged, making them widely used in large facilities, because they can withstand extremely harsh conditions. Additionally, they speed up processes by constantly scanning inputs, processing logic, and generating outputs within milliseconds.
+
+PLCs play a vital role in industrial automation, yet the FAMU-FSU College of Engineering does not cover their applications. With the rise of automation and smart manufacturing, there is a growing demand for engineers with exposure to PLCs. They are widely used in transportation, robotics, and manufacturing. Integrating PLCs into the curriculum will equip students with Ladder Logic programming skills, thus enhancing their technical abilities and broadening their interest in industrial automation. This curriculum design ensures students will obtain hands-on experiences while simulating real world applications and preparing them for technological advancements, overall making them more competitive in the job market. 
+
 PLC's were developed to replace physical relays. Previously, rewiring relays was a time consuming process that led to waste as boards would frequently be thrown 
 away instead of repurposed. Now, PLCs are used widely in industrial settings as they provide flexibile and robust programming of industrial equipment.
+
+The Introduction to Mechatronics course at FAMU-FSU College of Engineering plans to incorporate PLCs by adding three labs for students to complete by the end of the semester. The labs will cover I/O control, sensor-actuator integration, and Ladder Logic programming – the most common language. This tutorial will allow students to incorporate this new concept of Ladder Logic into MATLAB, simulating manufacturing processes digitally and fully grasping the logic behind making PLCs operate successfully.  
 
 ## Install
 
