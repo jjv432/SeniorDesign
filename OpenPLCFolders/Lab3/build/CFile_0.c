@@ -31,7 +31,8 @@ int state_buffer = 0;
 int state = 0;
 
 int last_state = -1;
-
+
+
 int last_Count_Value = -1;
 
 
@@ -55,9 +56,12 @@ lcd.setCursor(0, 0);
 
 
 
-lcd.print("In State:");
-
-lcd.setCursor(0,1);
+lcd.print("In State:");
+
+
+
+lcd.setCursor(0,1);
+
 lcd.print("Ctr Val:");
 
 }
@@ -168,13 +172,17 @@ lcd.setCursor(11,0);
 lcd.print(state);
 
 }
-
-if (Count_Value != last_Count_Value){
-lcd.setCursor(11,1);
+
+
+if (Count_Value != last_Count_Value){
+
+lcd.setCursor(11,1);
+
 lcd.print(Count_Value);
 }
 
-last_state = state;
+last_state = state;
+
 last_Count_Value = Count_Value;
 
 }

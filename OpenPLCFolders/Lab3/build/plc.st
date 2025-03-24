@@ -31,24 +31,24 @@ PROGRAM main
     St5 : BOOL;
   END_VAR
   VAR
-    BoxBut AT %IX0.1 : BOOL := 0;
-    StartBut AT %IX0.0 : BOOL := 0;
+    BoxBut : BOOL := 0;
+    StartBut : BOOL := 0;
   END_VAR
   VAR
     TimeDN : BOOL := 0;
     Time2DN : BOOL := 0;
   END_VAR
   VAR
-    BreakBeam AT %IX0.2 : BOOL := 0;
-    BreakBeam2 AT %IX0.3 : BOOL := 0;
-    StopBut AT %IX0.4 : BOOL := 0;
-    Motor AT %QX0.1 : BOOL := 0;
+    BreakBeam : BOOL := 0;
+    BreakBeam2 : BOOL := 0;
+    StopBut : BOOL := 0;
+    Motor : BOOL := 0;
   END_VAR
   VAR
     TON0 : TON;
   END_VAR
   VAR
-    LinearAct AT %QX0.2 : BOOL := 0;
+    LinearAct : BOOL := 0;
   END_VAR
   VAR_EXTERNAL
     Count_Value : INT;
