@@ -105,9 +105,3 @@ the XXXX of the box), *Y_Position* (of the XXXX of the box), and *figure* (the h
 
  __Properties__:
 
-### conveyor_assembly.m
- __Overview__:
-
- __Methods__:
-
- __Properties__:
