@@ -30,7 +30,7 @@ button_2 = [button_2_a; button_2_b; button_2_c];
 button_1 = timeseries(button_1, tot_time);
 button_2 = timeseries(button_2, tot_time);
 
-out = run_simulink_plc("Motor_and_LED", '0', '9', string(dt));
+out = run_simulink_plc("Motor_and_LED", '0', '9');
 
 %% Animating objects based on output
 vid = VideoWriter("ButtonAndLEDSimulation.avi");

@@ -20,7 +20,7 @@ dt = .1;
 button1 = timeseries([boolean(zeros(10, 1)); boolean(ones(20, 1))]);
 button2 = timeseries([boolean(zeros(20, 1)); boolean(ones(10, 1))]);
 
-out = run_simulink_plc("MIMO_FixedIO", '0', '30', string(dt));
+out = run_simulink_plc("MIMO_FixedIO", '0', '30');
 
 %% Running the simulation
 
