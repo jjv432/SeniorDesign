@@ -71,8 +71,10 @@ Assuming we have a _Box_ object called _b_:<br />
 ```
 >> b.draw_box(); 
 ```
-Generates the _figure_ property and plots it.<br />
+Generates the _figure_ property and plots it.
 
+<br />
+<br />
 
 ```
 >> b.move_box(<dt>, <velocity_x>, <velocity_y>);
