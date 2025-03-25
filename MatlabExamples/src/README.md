@@ -64,8 +64,10 @@ A box object can be created as follows:
 ```
 >> <Example_Box> = box(<HEIGHT>, <WIDTH>, <Initial_X_Position>, <Initial_Y_Position>);
 ```
+
 <br />
 <br />
+
  __Methods__:
 
 Assuming we have a _Box_ object called _b_:
@@ -94,6 +96,9 @@ replaced by the updated version, then plotted. This method lends itself to use w
 ```
 Creates an animation of the box being pushed off the conveyor belt, then falling down. _dt_ is the change in time between updating the box position, and direction 
  is if the box gets pushed forward (1) or backward (-1).
+
+<br />
+<br />
 
 __Properties__:
 
