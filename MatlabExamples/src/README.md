@@ -64,6 +64,8 @@ A box object can be created as follows:
 ```
 >> <Example_Box> = box(<HEIGHT>, <WIDTH>, <Initial_X_Position>, <Initial_Y_Position>);
 ```
+<br />
+<br />
  __Methods__:
 
 Assuming we have a _Box_ object called _b_:
