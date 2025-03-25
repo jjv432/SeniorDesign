@@ -3,20 +3,19 @@ This folder contains useful functions and objects that can be used when working 
 ## MATLAB Functions
 
 There are a number of useful functions provided to make the process of 
-learning ladder logic smoother. All of these exist in the _src_ folder of this repo.
+learning ladder logic smoother. All of these exist in the _src_ folder located in this directory.
 
 ### edit_simulink_plc.m
 ```
 >> edit_simulink_plc(<FILENAME>);
 ```
  __Overview__: This function helps in editing a Simulink PLC simulation by: 
-running the _plcloadtypes_ command which is necessary for the Ladder Logic to 
-execute; opens the Simulink PLC Ladder Library, which contains all of the PLC 
-Simulink blocks; and opens or a creates a Simulink file called \<FILENAME>\.
+running the _plcloadtypes_ command which is necessary for the Ladder Logic to execute; opens the Simulink PLC Ladder Library which contains all 
+of the PLC Simulink blocks that are used for inputs and outputs; and opens or a creates a Simulink file called \<FILENAME>\.
 
-__Inputs__: A filename, either of an already existing Simulink file in the current 
-directory, or the name of a new Simulink file (if that filename is not already being 
-used in the current directory).
+__Inputs__: A filename, either of an already existing Simulink file in the current working directory, or the name of a new Simulink file (if 
+that filename is not already being used in the current directory). If you use a new Simulink filename, this will automatically be created for 
+the user.
 
 __Outputs__: N/a
 
@@ -35,8 +34,9 @@ __Inputs__: A filename, either of an already existing Simulink file in the curre
 directory, or the name of a new Simulink file (if that filename is not already being 
 used in the current directory).
 
-__Outputs__: If created in the Simulink file, the "out" structure that is generated 
-using a "to workspace" block in the highest level of the PLC Simulation.
+__Outputs__: There will only be outputs from this function if you use the "to workspace" block in Simulink. You will need to add this block to 
+the highest level of the Simulink file. This referes to the page where you can see the PLC module only. It is also the level you are on right 
+after adding a PLC block to the Simulink file.
 
 ## MATLAB Objects 
 
@@ -45,11 +45,12 @@ using Simulink. These objects provide a way to animate the outputs of the Simuli
 file.
 
 >[!NOTE]
-> For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. _Properties_ are 
->characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and properties are accesses via dot notation. A 
->_constructor_ is used to initialize an object. See the course [Object-Oriented Programming in 
->MATLAB](https://www.mathworks.com/products/matlab/object-oriented-programming.html) or the tutorial [Introduction to Object-Oriented Programming in 
->MATLAB](https://www.mathworks.com/company/technical-articles/introduction-to-object-oriented-programming-in-matlab.html) for more.
+>For an object, _methods_ are functions that the object can complete. For example, this could be turning on and off the LED for the LED object. 
+> _Properties_ are characteristics of the object that the object stores. A simple example of this would be X-Position. Both methods and 
+> properties are accessed via dot notation. A _constructor_ is used to initialize an object. See the course [Object-Oriented Programming in 
+> MATLAB](https://www.mathworks.com/products/matlab/object-oriented-programming.html) or the tutorial [Introduction to Object-Oriented 
+> Programming in MATLAB](https://www.mathworks.com/company/technical-articles/introduction-to-object-oriented-programming-in-matlab.html) for 
+> more.
 
 ### box.m
  __Overview__:
@@ -67,22 +68,23 @@ A box object can be created as follows:
 
 Assuming we have a _Box_ object called _b_:
 
+
 ```
 >> b.draw_box(); 
 ```
 Generates the _figure_ property and plots it.
 
+
 ```
 >> b.move_box(<dt>, <velocity_x>, <velocity_y>);
 ```
-
 Updates the position of a box moving at *velocity_x* and *velocity_y* after *dt* seconds. The previous *figure* property is deleted and replaced by the updated 
  version, then plotted. This method lends itself to use within a for-loop to achieve smooth animations.
+
 
 ```
 >> b.push_box(<direction>, <dt>);
 ```
-
 Creates an animation of the box being pushed off the conveyor belt, then falling down. _dt_ is the change in time between updating the box position, and direction 
  is if the box gets pushed forward (1) or backward (-1).
 
