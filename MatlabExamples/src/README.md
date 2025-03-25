@@ -66,7 +66,9 @@ A box object can be created as follows:
 ```
  __Methods__:
 
-Assuming we have a _Box_ object called _b_:<br />
+Assuming we have a _Box_ object called _b_:
+<br />
+<br />
 
 ```
 >> b.draw_box(); 
@@ -80,8 +82,10 @@ Generates the _figure_ property and plots it.
 >> b.move_box(<dt>, <velocity_x>, <velocity_y>);
 ```
 Updates the position of a box moving at *velocity_x* and *velocity_y* after *dt* seconds. The previous *figure* property is deleted and 
-replaced by the updated version, then plotted. This method lends itself to use within a for-loop to achieve smooth animations. <br />
+replaced by the updated version, then plotted. This method lends itself to use within a for-loop to achieve smooth animations.
 
+<br />
+<br />
 
 ```
 >> b.push_box(<direction>, <dt>);
