@@ -43,8 +43,8 @@ useful as it allows us to use Arduino packages such as _LiquidCrystalI2c_.
 ## Usage
 
 ### MATLAB: Simulations
-To get started with Matlab Simulations of PLCs, see the [Matlab Functions Readme](MatlabExamples/README.md) for more details of the functions 
-that have been provided in the [MatlabExamples](MatlabExamples) folder for using Simulink.
+To get started with Matlab Simulations of PLCs in Simulink, see the [MatlabExamples](MatlabExamples) folder.
+Also in this folder is the [Matlab Functions Readme](MatlabExamples/README.md) if you want more details of the functions.
 
 The MATLAB simulations are used to provide students an oppurtunity to learn ladder logic without 
 being concerned about using or damaging hardware. A number of objects and functions have been included to make the simulation as 
