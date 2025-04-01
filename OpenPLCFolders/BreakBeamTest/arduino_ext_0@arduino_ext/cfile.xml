@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable name="DigitalReadOut" type="WORD"/>
+  </variables>
+  <sketch>
+    <xhtml:p><![CDATA[
+
+#include <LiquidCrystal_I2C.h>
+
+unsigned long long i = 1;
+
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+
+
+void sketch_setup() {
+
+
+
+  lcd.init();
+
+
+  lcd.backlight();
+
+
+
+lcd.setCursor(0, 0);
+
+
+}
+
+
+
+void sketch_loop() {
+
+
+if (i%10 == 0){
+
+lcd.clear();
+
+lcd.setCursor(0, 0);
+
+lcd.print(DigitalReadOut);
+
+
+}
+
+i ++;
+}
+]]></xhtml:p>
+  </sketch>
+</CFile>
