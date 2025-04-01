@@ -1,7 +1,10 @@
 # Matlab Examples
 This folder contains example matlab scripts that can be used for reference.
 
-To download just the files from this repository, go to [this link](https://download-directory.github.io/) and paste the URL of this page into the text box, and hit enter
+Use [this link](https://download-directory.github.io/) to download these examples. Once at the website, and paste the URL of this page into the text box, and hit enter
+
+>[!WARNING]
+> You MUST be using MATLAB 2024a or later, and you MUST download the entire _src_ folder for these examples to work.
 
 ## motor_led_main (LAB 1)
 
