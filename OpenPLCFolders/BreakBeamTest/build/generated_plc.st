@@ -19,7 +19,7 @@ PROGRAM program0
     _TMP_MOVE12_OUT : WORD;
   END_VAR
 
-  _TMP_GT1_OUT := GT(30000, DigitalRead);
+  _TMP_GT1_OUT := GT(100, DigitalRead);
   gtBool := _TMP_GT1_OUT;
   myout := gtBool OR userButton;
   _TMP_MOVE12_OUT := MOVE(DigitalRead);

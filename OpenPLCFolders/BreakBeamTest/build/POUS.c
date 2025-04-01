@@ -62,7 +62,7 @@ void PROGRAM0_body__(PROGRAM0 *data__) {
     (BOOL)__BOOL_LITERAL(TRUE),
     NULL,
     (UINT)2,
-    (WORD)30000,
+    (WORD)100,
     (WORD)__GET_LOCATED(data__->DIGITALREAD,)));
   __SET_VAR(data__->,GTBOOL,,__GET_VAR(data__->_TMP_GT1_OUT,));
   __SET_LOCATED(data__->,MYOUT,,(__GET_VAR(data__->GTBOOL,) || __GET_LOCATED(data__->USERBUTTON,)));
