@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-03-31T15:54:50"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-04-01T15:01:08">
+  <contentHeader name="Unnamed" modificationDateTime="2025-04-01T15:19:15">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -250,7 +250,7 @@
               <connectionPointOut>
                 <relPosition x="50" y="20"/>
               </connectionPointOut>
-              <expression>30000</expression>
+              <expression>100</expression>
             </inVariable>
           </LD>
         </body>
