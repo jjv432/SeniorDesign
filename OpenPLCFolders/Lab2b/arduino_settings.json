@@ -1,0 +1,23 @@
+{
+  "baud": "115200",
+  "board_type": "Arduino Opta",
+  "com_port": "COM10",
+  "dns": "8.8.8.8",
+  "gateway": "192.168.1.1",
+  "ip": "192.168.1.195",
+  "last_modified": 1743979667.1775458,
+  "mac": "0xDE, 0xAD, 0xBE, 0xEF, 0xDE, 0xAD",
+  "mb_serial": false,
+  "mb_tcp": false,
+  "pwd": "password",
+  "serial_iface": "Serial",
+  "slaveid": "1",
+  "ssid": "",
+  "subnet": "255.255.255.0",
+  "tcp_iface": "WiFi",
+  "txpin": "-1",
+  "user_ain": "A0, A1, A2, A3, A4, A5, A6, A7",
+  "user_aout": "-1",
+  "user_din": "A0, A1, A2, A3, A4, A5, A6, A7",
+  "user_dout": "D0, D1, D2, D3"
+}
